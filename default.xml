@@ -29,7 +29,7 @@
     <copyfile src="build-script" dest="mk" />
   </project>
 
-  <project path="android" name="MoKee/android" />
+  <project path="android" name="divis1969/android" revision="meilan2" />
 
   <project path="abi/cpp" remote="third" name="ThirdProject/android_abi_cpp" groups="pdk" />
   <project path="art" name="MoKee/android_art" groups="pdk" />
@@ -59,6 +59,7 @@
   <project path="device/google/accessory/arduino" name="device/google/accessory/arduino" groups="device" remote="aosp" />
   <project path="device/google/accessory/demokit" name="device/google/accessory/demokit" groups="device" remote="aosp" />
   <project path="device/google/atv" remote="third" name="ThirdProject/android_device_google_atv" groups="device" />
+  <project path="device/meizu/meilan2" name="divis1969/android_device_meizu_meilan2" />
   <project path="device/qcom/sepolicy" name="MoKee/android_device_qcom_sepolicy" />
   <project path="device/sample" name="device/sample" groups="pdk" remote="aosp" />
   <project path="docs/source.android.com" name="platform/docs/source.android.com" groups="pdk-cw-fs" remote="aosp" />
@@ -80,7 +81,7 @@
   <project path="external/bash" remote="third" name="ThirdProject/android_external_bash" />
   <project path="external/bison" name="platform/external/bison" groups="pdk" remote="aosp" />
   <project path="external/blktrace" name="platform/external/blktrace" groups="pdk-cw-fs" remote="aosp" />
-  <project path="external/bluetooth/bluedroid" remote="third" name="ThirdProject/android_external_bluetooth_bluedroid" groups="pdk" />
+  <project path="external/bluetooth/bluedroid" name="divis1969/android_external_bluetooth_bluedroid" groups="pdk" revision="meilan2" />
   <project path="external/bouncycastle" remote="third" name="ThirdProject/android_external_bouncycastle" />
   <project path="external/bsdiff" name="platform/external/bsdiff" groups="pdk" remote="aosp" />
   <project path="external/bson" remote="third" name="ThirdProject/android_external_bson" />
@@ -345,8 +346,8 @@
   <project path="external/zlib" remote="third" name="ThirdProject/android_external_zlib" groups="pdk" />
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs" remote="aosp" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs" remote="aosp" />
-  <project path="frameworks/av" name="MoKee/android_frameworks_av" groups="pdk" />
-  <project path="frameworks/base" name="MoKee/android_frameworks_base" />
+  <project path="frameworks/av" name="divis1969/android_frameworks_av" groups="pdk" revision="meilan2" />
+  <project path="frameworks/base" name="divis1969/android_frameworks_base" revision="meilan2" />
   <project path="frameworks/compile/libbcc" remote="third" name="ThirdProject/android_frameworks_compile_libbcc" groups="pdk" />
   <project path="frameworks/compile/mclinker" remote="third" name="ThirdProject/android_frameworks_compile_mclinker" groups="pdk" />
   <project path="frameworks/compile/slang" remote="third" name="ThirdProject/android_frameworks_compile_slang" groups="pdk" />
@@ -373,7 +374,7 @@
   <project path="frameworks/opt/net/wifi" name="MoKee/android_frameworks_opt_net_wifi" groups="pdk" />
   <project path="frameworks/opt/photoviewer" remote="third" name="ThirdProject/android_frameworks_opt_photoviewer" />
   <project path="frameworks/opt/setupwizard" remote="third" name="ThirdProject/android_frameworks_opt_setupwizard" groups="pdk-cw-fs" />
-  <project path="frameworks/opt/telephony" name="MoKee/android_frameworks_opt_telephony" groups="pdk" />
+  <project path="frameworks/opt/telephony" name="divis1969/android_frameworks_opt_telephony" groups="pdk" revision="meilan2" />
   <project path="frameworks/opt/timezonepicker" remote="third" name="ThirdProject/android_frameworks_opt_timezonepicker" />
   <project path="frameworks/opt/vcard" remote="third" name="ThirdProject/android_frameworks_opt_vcard" />
   <project path="frameworks/opt/widget" name="platform/frameworks/opt/widget" remote="aosp" />
@@ -402,7 +403,7 @@
   <project path="hardware/intel/img/psb_headers" name="platform/hardware/intel/img/psb_headers" groups="intel" remote="aosp" />
   <project path="hardware/intel/img/psb_video" name="platform/hardware/intel/img/psb_video" groups="intel" remote="aosp" />
   <project path="hardware/invensense" remote="third" name="ThirdProject/android_hardware_invensense" groups="invensense" />
-  <project path="hardware/libhardware" remote="third" name="ThirdProject/android_hardware_libhardware" groups="pdk" />
+  <project path="hardware/libhardware" name="divis1969/android_hardware_libhardware" groups="pdk" revision="meilan2" />
   <project path="hardware/libhardware_legacy" name="MoKee/android_hardware_libhardware_legacy" groups="pdk" />
   <project path="hardware/nvidia/audio" remote="third" name="ThirdProject/android_hardware_nvidia_audio" groups="nvidia_audio" />
   <project path="hardware/nvidia/tegra124" remote="third" name="ThirdProject/android_hardware_nvidia_tegra124" groups="tegra124" />
@@ -446,7 +447,7 @@
   <project path="ndk" name="platform/ndk" remote="aosp" />
   <project path="packages/apps/AudioFX" name="MoKee/android_packages_apps_AudioFX" />
   <project path="packages/apps/BasicSmsReceiver" remote="third" name="ThirdProject/android_packages_apps_BasicSmsReceiver" />
-  <project path="packages/apps/Bluetooth" remote="third" name="ThirdProject/android_packages_apps_Bluetooth" />
+  <project path="packages/apps/Bluetooth" name="divis1969/android_packages_apps_Bluetooth" revision="meilan2" />
   <project path="packages/apps/BluetoothExt" remote="third" name="ThirdProject/android_packages_apps_BluetoothExt" />
   <project path="packages/apps/Browser" name="MoKee/android_packages_apps_Browser" />
   <project path="packages/apps/Calculator" name="MoKee/android_packages_apps_Calculator" />
@@ -478,7 +479,7 @@
   <project path="packages/apps/PhoneCommon" remote="third" name="ThirdProject/android_packages_apps_PhoneCommon" />
   <project path="packages/apps/Profiles" name="MoKee/android_packages_apps_Profiles" />
   <project path="packages/apps/Provision" remote="third" name="ThirdProject/android_packages_apps_Provision" />
-  <project path="packages/apps/Settings" name="MoKee/android_packages_apps_Settings" />
+  <project path="packages/apps/Settings" name="divis1969/android_packages_apps_Settings" revision="meilan2" />
   <project path="packages/apps/SmartCardService" remote="third" name="ThirdProject/android_packages_apps_SmartCardService" />
   <project path="packages/apps/SoundRecorder" name="MoKee/android_packages_apps_SoundRecorder" />
   <project path="packages/apps/SpeechRecorder" remote="third" name="ThirdProject/android_packages_apps_SpeechRecorder" />
@@ -567,12 +568,12 @@
   <project path="prebuilts/sdk" name="platform/prebuilts/sdk" groups="pdk" clone-depth="1" remote="aosp" />
   <project path="prebuilts/tools" name="platform/prebuilts/tools" groups="pdk,tools" clone-depth="1" remote="aosp" />
   <project path="sdk" name="platform/sdk" remote="aosp" />
-  <project path="system/core" name="MoKee/android_system_core" groups="pdk" />
+  <project path="system/core" name="divis1969/android_system_core" groups="pdk" revision="meilan2" />
   <project path="system/extras" remote="third" name="ThirdProject/android_system_extras" groups="pdk" />
   <project path="system/extras/su" name="MoKee/android_system_extras_su" />
   <project path="system/keymaster" remote="third" name="ThirdProject/android_system_keymaster" groups="pdk" />
   <project path="system/media" remote="third" name="ThirdProject/android_system_media" groups="pdk" />
-  <project path="system/netd" remote="third" name="ThirdProject/android_system_netd" groups="pdk" />
+  <project path="system/netd" name="divis1969/android_system_netd" groups="pdk" revision="meilan2" />
   <project path="system/qcom" remote="third" name="ThirdProject/android_system_qcom" groups="qcom" />
   <project path="system/security" name="MoKee/android_system_security" groups="pdk" />
   <project path="system/vold" remote="third" name="ThirdProject/android_system_vold" groups="pdk" />
@@ -588,6 +589,7 @@
   <project path="tools/studio/cloud" name="platform/tools/studio/cloud" groups="notdefault,tools" remote="aosp" />
   <project path="tools/studio/translation" name="platform/tools/studio/translation" groups="notdefault,tools" remote="aosp" />
   <project path="tools/swt" name="platform/tools/swt" groups="notdefault,tools" remote="aosp" />
+  <project path="vendor/meizu/meilan2" name="divis1969/android_vendor_meizu_meilan2" />
   <project path="vendor/mk" name="MoKee/android_vendor_mk" />
   <project path="vendor/mksdk" name="MoKee/mk_platform_sdk" />
 </manifest>
