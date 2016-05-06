@@ -299,7 +299,7 @@
   <project groups="pdk" name="divis1969/android_hardware_libhardware" path="hardware/libhardware" revision="8857f039f98de51870d9cbe51051941928e17350" upstream="meilan2"/>
   <project name="divis1969/android_packages_apps_Bluetooth" path="packages/apps/Bluetooth" revision="ceedf48f333584446975f3c0cab892ef333a3163" upstream="meilan2"/>
   <project name="divis1969/android_packages_apps_CMUpdater" path="packages/apps/CMUpdater" revision="3fac0d34ae872e8979d4637e920350a1e61ab403" upstream="meilan2"/>
-  <project name="divis1969/android_packages_apps_Settings" path="packages/apps/Settings" revision="f670b9e27c62cd613e96fefaa49efea807795842" upstream="meilan2"/>
+  <project name="divis1969/android_packages_apps_Settings" path="packages/apps/Settings" revision="f415d3321fa084c424d0016206b76f7e23b8fca4" upstream="meilan2"/>
   <project groups="pdk" name="divis1969/android_system_core" path="system/core" revision="f450cfcb5b38fb9ad7e949eb48f4833f52163183" upstream="meilan2"/>
   <project groups="pdk" name="divis1969/android_system_netd" path="system/netd" revision="5cb001a0122ad5318da21dfcd3ab98624f90efb1" upstream="meilan2"/>
   <project name="divis1969/android_vendor_meizu_meilan2" path="vendor/meizu/meilan2" revision="356ad3552f877fc6d5b5f82c103ab413fa7c26af" upstream="refs/heads/cm-12.1"/>
