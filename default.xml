@@ -494,4 +494,7 @@
 
   <include name="snippets/cm-14.0.xml" />
 
+  <project path="device/meizu/meilan2" name="divis1969/android_device_meizu_meilan2" revision="cm-14.0-meilan2"/>
+  <project path="vendor/meizu/meilan2" name="divis1969/android_vendor_meizu_meilan2" revision="cm-14.0-meilan2"/>
+
 </manifest>
