@@ -5,7 +5,7 @@
   <include name="snippets/hal_cm_all.xml" />
 
   <!-- CyanogenMod additions -->
-  <project path="android" name="CyanogenMod/android" />
+  <project path="android" name="divis1969/android" revision="cm-14.0-meilan2" />
   <project path="external/ahbottomnavigation" name="CyanogenMod/android_external_ahbottomnavigation" />
   <project path="external/android-visualizer" name="CyanogenMod/android_external_android-visualizer" />
   <project path="external/bash" name="CyanogenMod/android_external_bash" />
