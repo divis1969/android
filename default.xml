@@ -299,7 +299,8 @@
   <project path="external/zlib" name="CyanogenMod/android_external_zlib" groups="pdk" />
   <project path="external/zopfli" name="platform/external/zopfli" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="external/zxing" name="platform/external/zxing" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
-  <project path="frameworks/av" name="CyanogenMod/android_frameworks_av" groups="pdk" />
+  <!-- <project path="frameworks/av" name="CyanogenMod/android_frameworks_av" groups="pdk" /> -->
+  <project path="frameworks/av" name="divis1969/android_frameworks_av" groups="pdk" revision="cm-14.1-meilan2" />
   <project path="frameworks/base" name="CyanogenMod/android_frameworks_base" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/compile/libbcc" name="platform/frameworks/compile/libbcc" groups="pdk" remote="aosp" />
   <project path="frameworks/compile/mclinker" name="platform/frameworks/compile/mclinker" groups="pdk" remote="aosp" />
@@ -473,7 +474,8 @@
   <project path="system/connectivity/apmanager" name="platform/system/connectivity/apmanager" remote="aosp" />
   <project path="system/connectivity/dhcp_client" name="platform/system/connectivity/dhcp_client" remote="aosp" />
   <project path="system/connectivity/shill" name="platform/system/connectivity/shill" remote="aosp" />
-  <project path="system/core" name="CyanogenMod/android_system_core" groups="pdk" />
+  <!-- <project path="system/core" name="CyanogenMod/android_system_core" groups="pdk" /> -->
+  <project path="system/core" name="divis1969/android_system_core" groups="pdk" revision="cm-14.1-meilan2" />
   <project path="system/extras" name="CyanogenMod/android_system_extras" groups="pdk" />
   <project path="system/firewalld" name="platform/system/firewalld" remote="aosp" />
   <project path="system/gatekeeper" name="platform/system/gatekeeper" groups="pdk" remote="aosp" />
@@ -483,7 +485,8 @@
   <project path="system/netd" name="CyanogenMod/android_system_netd" groups="pdk" />
   <project path="system/nvram" name="platform/system/nvram" remote="aosp" />
   <project path="system/security" name="CyanogenMod/android_system_security" groups="pdk" />
-  <project path="system/sepolicy" name="CyanogenMod/android_system_sepolicy" groups="pdk" />
+  <!-- <project path="system/sepolicy" name="CyanogenMod/android_system_sepolicy" groups="pdk" /> -->
+  <project path="system/sepolicy" name="divis1969/android_system_sepolicy" groups="pdk" revision="cm-14.1-meilan2" />
   <project path="system/tools/aidl" name="CyanogenMod/android_system_tools_aidl" groups="pdk-cw-fs,pdk-fs" />
   <project path="system/tpm" name="platform/system/tpm" remote="aosp" />
   <project path="system/update_engine" name="platform/system/update_engine" remote="aosp" />
@@ -506,4 +509,6 @@
 
   <include name="snippets/cm.xml" />
 
+  <project path="device/meizu/meilan2" name="divis1969/android_device_meizu_meilan2" revision="cm-14.1-meilan2"/>
+  <project path="vendor/meizu/meilan2" name="divis1969/android_vendor_meizu_meilan2" revision="cm-14.1-meilan2"/>
 </manifest>
