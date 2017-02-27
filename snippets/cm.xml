@@ -38,7 +38,6 @@
   <project path="packages/apps/AudioFX" name="LineageOS/android_packages_apps_AudioFX" />
   <project path="packages/apps/Browser" name="LineageOS/android_packages_apps_Browser" />
   <project path="packages/apps/CMBugReport" name="LineageOS/android_packages_apps_CMBugreport" />
-  <project path="packages/apps/CMFileManager" name="LineageOS/android_packages_apps_CMFileManager" />
   <project path="packages/apps/CMParts" name="LineageOS/android_packages_apps_CMParts" />
   <!-- <project path="packages/apps/CMUpdater" name="LineageOS/android_packages_apps_CMUpdater" /> -->
   <project path="packages/apps/CMUpdater" name="divis1969/android_packages_apps_CMUpdater" revision="los-14.1-meilan2" />
