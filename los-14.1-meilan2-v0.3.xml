@@ -1,0 +1,594 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://android.googlesource.com" name="aosp" review="android-review.googlesource.com" revision="refs/tags/android-7.1.1_r21"/>
+  <remote fetch=".." name="github" review="review.lineageos.org"/>
+  <remote fetch="ssh://git@github.com" name="private"/>
+  
+  <default remote="github" revision="refs/heads/cm-14.1" sync-c="true" sync-j="4"/>
+  
+  <project groups="pdk" name="LineageOS/android_art" path="art" revision="773e16b98cb8ca2000eaeaf49f239f39ac51d562" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_bionic" path="bionic" revision="a15dbf3252216797e767be935a8b39a0edf5c5d1" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_bootable_recovery" path="bootable/recovery" revision="9041a47a38957009ba31476642a21534705099ae" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk,tradefed" name="LineageOS/android_build" path="build" revision="48ea3a47bc1a7e05f70b1b112bf169e865791ffd" upstream="refs/heads/cm-14.1">
+    <copyfile dest="Makefile" src="core/root.mk"/>
+  </project>
+  <project groups="pdk,tradefed" name="LineageOS/android_build_kati" path="build/kati" revision="bc43789a938c10cb00b81ddf08239c1b4cea48bb" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_dalvik" path="dalvik" revision="df225335164600d44d9caae4736d2b3c779c4c3a" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_development" path="development" revision="1b883b45d9bf4582425d2b1cf5ad3a2c6853e084" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_device_qcom_sepolicy" path="device/qcom/sepolicy" revision="e4fb9eaefc036478e3a97e0d9a0ffbf5f0d2d0fe" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_aac" path="external/aac" revision="acbe346dd9546ecd4623103ea14c6a6abbf2ea3f" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_external_android-clat" path="external/android-clat" revision="fbc7e056ed22ce3eb3924293733571a12eee7363" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_ant-wireless_ant_native" path="external/ant-wireless/ant_native" revision="09d9c5fd5339421c4336d47f8482133f284ae98d" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_ant-wireless_ant_service" path="external/ant-wireless/ant_service" revision="b616838fc8c89085742a542d528e2fd55d679ef9" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_ant-wireless_antradio-library" path="external/ant-wireless/antradio-library" revision="85290ef0527d2f4cf82fdc3ffc290c970ca57f6b" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_bash" path="external/bash" revision="3088421f7f979c908edd61cddd8c02410cea5d8c" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_boringssl" path="external/boringssl" revision="8293da78d99d9ace675b3da2e12a2005ef6ba0ee" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_brctl" path="external/brctl" revision="85130b403dea07b2230efed3287236fa0caefb1c" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_bzip2" path="external/bzip2" revision="0820f67f09cbbbebb6b3991ce94842d4eb86a34f" upstream="refs/heads/cm-14.1"/>
+  <project clone-depth="1" groups="pdk" name="LineageOS/android_external_chromium-webview" path="external/chromium-webview" revision="449ed5d27f8adf2b349061c1d436222d14b9f0b8" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_cmsdk-api-coverage" path="external/cmsdk-api-coverage" revision="c281622c132eade02fd790fca993d8fd09385cc8" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_connectivity" path="external/connectivity" revision="9a6a5e7b56f1e67c7e585d75f18eacc54398695d" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_cyanogen_UICommon" path="external/uicommon" revision="f465bc68b7d5311ca2dc13f39a8466eb4bff6027" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_e2fsprogs" path="external/e2fsprogs" revision="016c2c777dbf0ed4bace4a386f2dbfb1ddde1964" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_ebtables" path="external/ebtables" revision="8b1e493df0ebad8ba6015a2bdae794fe04ffa982" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_elfutils" path="external/elfutils" revision="78662f08979a031ca3de5a1a29e133bf671bc177" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_exfat" path="external/exfat" revision="49c64dedccdfa3c071d57b37dc3ccb1a348450ee" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_f2fs-tools" path="external/f2fs-tools" revision="d895e392df9d44c7e5ccabd90e5fa61eaa17da57" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_ffmpeg" path="external/ffmpeg" revision="248cdbb33213983bafb430505acf15f7c55ec036" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_flac" path="external/flac" revision="5308e9a0288411656eebd9e8eb58519f272e2ff9" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_external_fsck_msdos" path="external/fsck_msdos" revision="07346633a11772924a27e103bd1506582a4ad299" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_fuse" path="external/fuse" revision="3ecfa58e23f723914cb479262dbf393ee4821295" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_gello_build" path="external/gello-build" revision="012226735efbf68e24ec9f5f2eab866fe47ef077" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_external_gptfdisk" path="external/gptfdisk" revision="3688a9f8d517891acbfff450f2030e16134e156f" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_gson" path="external/gson" revision="4bc2ec0628f74bc24c3820951f4ca2c91e516f7a" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_htop" path="external/htop" revision="841159c272ac08b1cd5bdef5167a8ce11383fbb5" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_icu" path="external/icu" revision="9b1e26ab8ec0576c67982c7026a6be41677b7b03" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_external_ipsec-tools" path="external/ipsec-tools" revision="8116a3ddb08abf5f996a12c11b389dc814714f84" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_jemalloc" path="external/jemalloc" revision="836d53673c7e36381d249618ca238c52d084096a" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_json-c" path="external/json-c" revision="6f9c02d6b1437f5203f866805c8f602476b3cc4e" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_libncurses" path="external/libncurses" revision="067ae32f7e4b45bb1cb7ba37d0ffe618905e049f" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_libnetfilter_conntrack" path="external/libnetfilter_conntrack" revision="771a11bae461bccb23ee52f269c61c4bbdf4e152" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_libnfc-nci" path="external/libnfc-nci" revision="3cf6ea365993db8abf479b46163421aa78238050" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_libnfc-nxp" path="external/libnfc-nxp" revision="978e1ce3fc660546a6e0b4432e2af95e1621ce82" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_libnfnetlink" path="external/libnfnetlink" revision="80ba60f6a117f73fb4497615511dac44870eacdb" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_libphonenumbergoogle" path="external/libphonenumbergoogle" revision="6d3030c03cc39c4921b77dbf3f4905be41585881" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_libselinux" path="external/libselinux" revision="e9ed8de2f5866f12cfea4d7b1c61a91fbb710387" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_libtar" path="external/libtar" revision="70ac35f4e6479e25a1b042a56998553d8ed0ee2c" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_libtruezip" path="external/libtruezip" revision="45ac3d07b5a4753bd1abc9fa38fd48221312a3d9" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_lzma" path="external/lzma" revision="f48cbddec33db2f2ca6380fc21806022481074f3" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_lzo" path="external/lzo" revision="409e081d386c767ea872709efcc0adec20457f6d" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_mksh" path="external/mksh" revision="85bec4ffaa9d792ee0272c6253196175412c9249" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_nano" path="external/nano" revision="c2911d0f5efd4cfdf7939dc899116aa783221559" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_ntfs-3g" path="external/ntfs-3g" revision="5effca10f077fcd50d3fd9e3719a8465c579f229" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_external_okhttp" path="external/okhttp" revision="43d931d7e8f292653fd1b5a18ba9e9d0667663f9" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_openssh" path="external/openssh" revision="613dd5c51d2666411ec1dc918be5ebcb3adf64f0" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_p7zip" path="external/p7zip" revision="5af5e5699d1a4e8ad8dd0f03ad64b5354eb45d08" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_pigz" path="external/pigz" revision="b017edd756ff80d8b3beac8652bb227e021b91f2" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_powertop" path="external/powertop" revision="01b793c31423ccdb68b2fc8fd08a09d541a00b4b" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_protobuf-c" path="external/protobuf-c" revision="f5acb16b4e8b57f5be4083960023982443bddbca" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_rsync" path="external/rsync" revision="a36d905455cc35d7092e8429f468df1f8d922b4e" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk,qcom_msm8x26" name="LineageOS/android_external_skia" path="external/skia" revision="0c1a334de027fcfc5a5465b9dec487b90df75840" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_stagefright-plugins" path="external/stagefright-plugins" revision="fdc0d6b58aaeef0952e0463ed64ad4ed01cc6264" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_tinyalsa" path="external/tinyalsa" revision="af4adaa5878623a62e34bba830f7cfee57dae995" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_tinycompress" path="external/tinycompress" revision="439a4ecddc7b01bc9b94a34e783e2026e4ed4c78" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_tinyxml2" path="external/tinyxml2" revision="41e0f655ec890e9bfdd5b3470dc6cc5614c224d8" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_toybox" path="external/toybox" revision="39eedbfb3d53fcbaa28caf4e32e360245c40b2e2" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_unrar" path="external/unrar" revision="04f0097904667f822e7476318f30b8f45be64f9a" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_unzip" path="external/unzip" revision="a24c870b9f87ce692bdd352e2dfa4e06fcd266b5" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_vim" path="external/vim" revision="a7b10a8119fc1c98f029f4c7cafde41e7452291f" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_wpa_supplicant_8" path="external/wpa_supplicant_8" revision="932d1d2be7a69a3f8ab416393a1630d6ded8d731" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_yaffs2" path="external/yaffs2" revision="fd7903aa063ed814fbfc204c6f666acc408d33a8" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_external_zip" path="external/zip" revision="3e0b8acbdd20db415b91941709adf07c1ef8f3c4" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_external_zlib" path="external/zlib" revision="db8bc995325116d222cbbc3c376d5b200ba325e5" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_frameworks_base" path="frameworks/base" revision="0cdc56ccb6913ae4534727c6c1e521d8adc5ce3b" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_frameworks_native" path="frameworks/native" revision="5c6ac0255d41dd1b0e5fd4b9ef1628fe2ca930b9" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_frameworks_opt_chips" path="frameworks/opt/chips" revision="e7ada8cea10573350978b77813735f331220d3ad" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_frameworks_opt_datetimepicker" path="frameworks/opt/datetimepicker" revision="3b185e9493f47d35cb412345ce9855731b45abde" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_frameworks_opt_hardware" path="frameworks/opt/hardware" revision="ca48b0cbf041626a0ec20cf7e61d1f21a43cdb81" upstream="refs/heads/cm-14.1"/>
+  <project groups="frameworks_ims,pdk-cw-fs,pdk-fs" name="LineageOS/android_frameworks_opt_net_ims" path="frameworks/opt/net/ims" revision="2a89b2ac7b4b359df8f3f9eb3d66462a398213c2" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_frameworks_opt_net_wifi" path="frameworks/opt/net/wifi" revision="76493b8dba73ba16d60559db182a16cfc1dbd700" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_frameworks_opt_setupwizard" path="frameworks/opt/setupwizard" revision="f012a917454227ddfb2a1b95b46419735f3a431d" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_frameworks_opt_telephony" path="frameworks/opt/telephony" revision="4a9f49f739d603a663add805812467748ef5816e" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_frameworks_opt_vcard" path="frameworks/opt/vcard" revision="6592684647ae2493d9369c0ff0ae0ebd9cc4cbea" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_frameworks_support" path="frameworks/support" revision="0285afecf474df8254879e2c35043d4174713d69" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_hardware_broadcom_libbt" path="hardware/broadcom/libbt" revision="0034a25fef249ecf9ad41cfb81f9682a436dab11" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk,broadcom_wlan" name="LineageOS/android_hardware_broadcom_wlan" path="hardware/broadcom/wlan" revision="ec1bdf2e0a3df10b8e26915155c6e3df5bc5cc8c" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_hardware_cyanogen" path="hardware/cyanogen" revision="bab4499af953368cfdcaf04617c0f2b9bf9bc06e" upstream="refs/heads/cm-14.1"/>
+  <project groups="intel" name="LineageOS/android_hardware_intel_common_libmix" path="hardware/intel/common/libmix" revision="7f2d5a0df25852b3f3abb9dc7ad8f7baa7f9a418" upstream="refs/heads/cm-14.1"/>
+  <project groups="intel" name="LineageOS/android_hardware_intel_common_libva" path="hardware/intel/common/libva" revision="497db87851a0ea0c2d1522cae66896dbab6f463b" upstream="refs/heads/cm-14.1"/>
+  <project groups="intel" name="LineageOS/android_hardware_intel_common_libwsbm" path="hardware/intel/common/libwsbm" revision="0dc67b0d9afd3b43cfb680508e8ad2b84eff79e0" upstream="refs/heads/cm-14.1"/>
+  <project groups="intel" name="LineageOS/android_hardware_intel_common_omx-components" path="hardware/intel/common/omx-components" revision="5abed81bb67fcab14b4e848bb3c099939f2575b1" upstream="refs/heads/cm-14.1"/>
+  <project groups="intel" name="LineageOS/android_hardware_intel_common_utils" path="hardware/intel/common/utils" revision="56174842eb08355cc9e5c648aaa74faf0188f6e4" upstream="refs/heads/cm-14.1"/>
+  <project groups="intel" name="LineageOS/android_hardware_intel_img_hwcomposer" path="hardware/intel/img/hwcomposer" revision="77a569025ab503a81a93a06ac7c6ee08df40cff6" upstream="refs/heads/cm-14.1"/>
+  <project groups="intel" name="LineageOS/android_hardware_intel_img_psb_headers" path="hardware/intel/img/psb_headers" revision="7bb0667b1f08f8d331dbd673398ebd87061f006c" upstream="refs/heads/cm-14.1"/>
+  <project groups="intel" name="LineageOS/android_hardware_intel_img_psb_video" path="hardware/intel/img/psb_video" revision="72b4180a94e253b0a6f6a33ebb1b8b56e9205ea2" upstream="refs/heads/cm-14.1"/>
+  <project groups="invensense" name="LineageOS/android_hardware_invensense" path="hardware/invensense" revision="1693470c8877f7daf77ade928882fc8642a6b805" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_hardware_libhardware" path="hardware/libhardware" revision="721e37cd8539d996a88b6c636bcfbb4c41d151f9" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_hardware_libhardware_legacy" path="hardware/libhardware_legacy" revision="ece325ebc05974f7d9789618b307cee75e9e5002" upstream="refs/heads/cm-14.1"/>
+  <project groups="qcom,qcom_audio" name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio/default" revision="bc83ef06cf69f04a11f70dd19b326c9329f9e1ae" upstream="refs/heads/cm-14.1"/>
+  <project groups="qcom,qcom_audio" name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio-caf/apq8084" revision="a9bf1aa5507d94c89ea3e074d7198e8eb3d1f57b" upstream="cm-14.1-caf-8084"/>
+  <project groups="qcom,qcom_audio" name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8916" revision="c205dc81bb55504f423c0c5f63f4c0d9b933ee80" upstream="cm-14.1-caf-8916"/>
+  <project groups="qcom,qcom_audio" name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8937" revision="7f7cc95360ef6305fc88e56bd257ceaf9620a882" upstream="cm-14.1-caf-8937"/>
+  <project groups="qcom,qcom_audio" name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8952" revision="37f832f2a775721888ef63967f929bd408ead2f3" upstream="cm-14.1-caf-8952"/>
+  <project groups="qcom,qcom_audio" name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8960" revision="727d95e39bae740075aac5ab3ceab9f11c82bf17" upstream="cm-14.1-caf-8960"/>
+  <project groups="qcom,qcom_audio" name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8974" revision="45552c30227c9b0a7b5036aa79c940f12fc9312c" upstream="cm-14.1-caf-8974"/>
+  <project groups="qcom,qcom_audio" name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8994" revision="c05562e98b4e3fbbaf82a3cd2b1e57dd6e6dd72f" upstream="cm-14.1-caf-8994"/>
+  <project groups="qcom,qcom_audio" name="LineageOS/android_hardware_qcom_audio" path="hardware/qcom/audio-caf/msm8996" revision="25bbb88034a2d4febf1713023b8030c2f471ec75" upstream="cm-14.1-caf-8996"/>
+  <project groups="pdk" name="LineageOS/android_hardware_qcom_bootctrl" path="hardware/qcom/bootctrl" revision="0a8485b5a0f79b0a86191ac52c583613824fb8d5" upstream="refs/heads/cm-14.1"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_bt" path="hardware/qcom/bt" revision="9fda5c31e80295d29282e8b8a326767c979d9a07" upstream="refs/heads/cm-14.1"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_bt" path="hardware/qcom/bt-caf" revision="1e285c6d2c7486793cc118c2f6e8b80812f2f4f1" upstream="cm-14.1-caf"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_camera" path="hardware/qcom/camera" revision="702f237b021760b43aceae18f5b3ce8084ccde8d" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk,qcom,qcom_display" name="LineageOS/android_hardware_qcom_display" path="hardware/qcom/display" revision="d7dc8cdb1201962f93d4f6fb4371ed0083cf1f5d" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk,qcom,qcom_display" name="LineageOS/android_hardware_qcom_display" path="hardware/qcom/display-caf/apq8084" revision="90b39d3bdad421d55c56a1ad9b8444efdbef2b70" upstream="cm-14.1-caf-8084"/>
+  <project groups="pdk,qcom,qcom_display" name="LineageOS/android_hardware_qcom_display" path="hardware/qcom/display-caf/msm8916" revision="c1f04bed2a557c858b993b57d3fa8e89573161eb" upstream="cm-14.1-caf-8916"/>
+  <project groups="pdk,qcom,qcom_display" name="LineageOS/android_hardware_qcom_display" path="hardware/qcom/display-caf/msm8937" revision="3dfb72afcb8b651e1f28d1c9aba8e563f7fddbd7" upstream="cm-14.1-caf-8937"/>
+  <project groups="pdk,qcom,qcom_display" name="LineageOS/android_hardware_qcom_display" path="hardware/qcom/display-caf/msm8952" revision="5826a44279d9eac8a11463520606a8164f096baa" upstream="cm-14.1-caf-8952"/>
+  <project groups="pdk,qcom,qcom_display" name="LineageOS/android_hardware_qcom_display" path="hardware/qcom/display-caf/msm8960" revision="f27984c7b5e59605b45870e6e19b23242f0537d8" upstream="cm-14.1-caf-8960"/>
+  <project groups="pdk,qcom,qcom_display" name="LineageOS/android_hardware_qcom_display" path="hardware/qcom/display-caf/msm8974" revision="9e71415ab9acba745b9216a7bb8592bed0c7dbeb" upstream="cm-14.1-caf-8974"/>
+  <project groups="pdk,qcom,qcom_display" name="LineageOS/android_hardware_qcom_display" path="hardware/qcom/display-caf/msm8994" revision="51630074e93141adf7d1db5644f84d65349dc48b" upstream="cm-14.1-caf-8994"/>
+  <project groups="pdk,qcom,qcom_display" name="LineageOS/android_hardware_qcom_display" path="hardware/qcom/display-caf/msm8996" revision="c372a9bbbe8f3f48f3f32b029cc16a8d03b1f7dc" upstream="cm-14.1-caf-8996"/>
+  <project groups="qcom,qcom_fm" name="LineageOS/android_hardware_qcom_fm" path="hardware/qcom/fm" revision="63372761bae86a09a3e427a839b19bb8d480a833" upstream="refs/heads/cm-14.1"/>
+  <project groups="qcom,qcom_gps" name="LineageOS/android_hardware_qcom_gps" path="hardware/qcom/gps" revision="371e95f4406ca97bd6493c28c551859ae33e06fe" upstream="refs/heads/cm-14.1"/>
+  <project groups="qcom,qcom_keymaster" name="LineageOS/android_hardware_qcom_keymaster" path="hardware/qcom/keymaster" revision="9fa20f36ed356694019d9c26e1a9b09ba44776d7" upstream="refs/heads/cm-14.1"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media" revision="c8a76055f0ac52341ab8d5f595afb23e5fbae34a" upstream="refs/heads/cm-14.1"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media-caf/apq8084" revision="e1c1f5a7b502df4278ecc33fc01f2417e2760102" upstream="cm-14.1-caf-8084"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media-caf/msm8916" revision="4c3361b2fb19bd9ac0e29b0a97feae4240e341ad" upstream="cm-14.1-caf-8916"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media-caf/msm8937" revision="64e0fc127df221f7b93f013d27dfdacd417cd1fb" upstream="cm-14.1-caf-8937"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media-caf/msm8952" revision="b5a8b18081278b8d3cce3f6bd2b7cfcbdf76e459" upstream="cm-14.1-caf-8952"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media-caf/msm8960" revision="3e34f2426e41f0111b5b016f5d4e8aecb8954fa3" upstream="cm-14.1-caf-8960"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media-caf/msm8974" revision="99eef721ecc527eaa42ab7d0ef21a9fd2d352abc" upstream="cm-14.1-caf-8974"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media-caf/msm8994" revision="1f58202505b47cc057a7d1c5e976c1a01ab8cdb8" upstream="cm-14.1-caf-8994"/>
+  <project groups="qcom" name="LineageOS/android_hardware_qcom_media" path="hardware/qcom/media-caf/msm8996" revision="86c766ce3add693cf9e733729ea569aac3fc2934" upstream="cm-14.1-caf-8996"/>
+  <project groups="qcom_wlan" name="LineageOS/android_hardware_qcom_wlan" path="hardware/qcom/wlan" revision="ed62a2fce1cd8f891862ec342c4500de6d49da3c" upstream="refs/heads/cm-14.1"/>
+  <project groups="qcom_wlan" name="LineageOS/android_hardware_qcom_wlan" path="hardware/qcom/wlan-caf" revision="b6b2caef1d920328902481cca17f7723e1813cdc" upstream="cm-14.1-caf"/>
+  <project groups="pdk" name="LineageOS/android_hardware_ril" path="hardware/ril" revision="4715c6545d9fafb6ad554818ddd5839268dc022f" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_hardware_ril" path="hardware/ril-caf" revision="927a52d5d3bfc9b86a4751f4f67c8a886c349cce" upstream="cm-14.1-caf"/>
+  <project name="LineageOS/android_hardware_ti_omap4" path="hardware/ti/omap4" revision="a6fd7f48e69497ae2cc8bb3b93292618ae3ff23d" upstream="refs/heads/cm-14.1"/>
+  <project groups="omap4" name="LineageOS/android_hardware_ti_omap4xxx" path="hardware/ti/omap4xxx" revision="b94c6fe6065530b9b10ac3be53a35906e81a155a" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_hardware_ti_wlan" path="hardware/ti/wlan" revision="f75d24a45f68dfeabda86d2e8416990d796f9a7e" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_hardware_ti_wpan" path="hardware/ti/wpan" revision="bcf2967acf1a644a59cb113891ad618b1a4cad5f" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_libcore" path="libcore" revision="7afe9e8f797e331078f1af8c43b0c4d94552cb70" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_AudioFX" path="packages/apps/AudioFX" revision="9b36fdc066a6b0f27266b2f5305d16638128dcc6" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_apps_Bluetooth" path="packages/apps/Bluetooth" revision="d484cab1e0e52ddec82ec48af3930963cce8b5f3" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_Browser" path="packages/apps/Browser" revision="652e0a5954ed2ce55cac7bc90e3775b960da6041" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_CMBugreport" path="packages/apps/CMBugReport" revision="1803055b9badff77c50060860fe18bc171ee7486" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_CMParts" path="packages/apps/CMParts" revision="4677ce60b142684be8de0277666c68c3eb61775b" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_Calendar" path="packages/apps/Calendar" revision="4a2393ef0067ee46da778bf47f1b2973df210744" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_Camera2" path="packages/apps/Camera2" revision="90e6bfbc4c3e390d8c370795fe2c50e98a91fe75" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_CarrierConfig" path="packages/apps/CarrierConfig" revision="1f75d78d75e70ea68febb1d5d4ae4d6b4ce7b513" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_CellBroadcastReceiver" path="packages/apps/CellBroadcastReceiver" revision="346b2a3bd18c6689b4ea4cb9c2fe466732a7c6fa" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_apps_CertInstaller" path="packages/apps/CertInstaller" revision="2062efc26c363efc168401241b031bbe5ba51c00" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_Contacts" path="packages/apps/Contacts" revision="2fa12d760f0a60b22d20fd021a64641f092b2197" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_ContactsCommon" path="packages/apps/ContactsCommon" revision="361996cb6ed767ee6ca7ba0c3fc8f55ffd657a42" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_DeskClock" path="packages/apps/DeskClock" revision="a9eb88be8687fb8174ce714cc21fcc91e1a91225" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_Dialer" path="packages/apps/Dialer" revision="d7fbcfc3e9412b30608caf7b3545e4562e560c55" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_Eleven" path="packages/apps/Eleven" revision="21bbc9c83b7c573e0dd85aee38b091943b730595" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_Email" path="packages/apps/Email" revision="e29763c2dd356647ab850a30b061d11da55e6143" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_EmergencyInfo" path="packages/apps/EmergencyInfo" revision="5f291a251e0c34e17bf763a01efc8e96c28168ff" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_ExactCalculator" path="packages/apps/ExactCalculator" revision="d2a67529a0afca8722ce5f0cc2edf04ddd1d9117" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_Exchange" path="packages/apps/Exchange" revision="e458fec74d3075b5837fbcaf814f5669b5682302" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_FMRadio" path="packages/apps/FMRadio" revision="cf589ab30c8035b3435103ba65f00345727f7aac" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_Gallery2" path="packages/apps/Gallery2" revision="399265ea7d4d5e3dc28632fecaf11fffbbd84e20" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_Gello" path="packages/apps/Gello" revision="dea84193234c7df0744e99de371a18e5104a1cc8" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_HTMLViewer" path="packages/apps/HTMLViewer" revision="ec61c564e7c719c185ec84890dcbf83486c9043c" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_KeyChain" path="packages/apps/KeyChain" revision="25cd354f1e914af59d4f58500230b2d4af9c6082" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_LockClock" path="packages/apps/LockClock" revision="92d54030ff0d4a8ec8abcd356beb1ca270f37618" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_ManagedProvisioning" path="packages/apps/ManagedProvisioning" revision="e3d6ed5cb30d997e30a43266d00dfbbed7f06e82" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_Messaging" path="packages/apps/Messaging" revision="370f47341de93ee1d282376bac514a5421b57923" upstream="refs/heads/cm-14.1"/>
+  <project groups="apps_nfc,pdk-fs" name="LineageOS/android_packages_apps_Nfc" path="packages/apps/Nfc" revision="9748287e575819211b189e8958938c43e8b0ebd3" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_OpenWeatherMapProvider" path="vendor/cmsdk/samples/weatherproviderservice/OpenWeatherMapProvider" revision="266118841ccf396adda6ed3e5407d38092784ff0" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_PackageInstaller" path="packages/apps/PackageInstaller" revision="6c0e26fd3707ef79df8794f588f282ea5b3586f6" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_apps_PhoneCommon" path="packages/apps/PhoneCommon" revision="921e5c5ef7a1ad8e4547debc4891bcedc974b1f2" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_Profiles" path="packages/apps/Profiles" revision="83dd47fe3909f12dc2bedd4b5f0f937609eab4f2" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_Recorder" path="packages/apps/Recorder" revision="7a11f99cf02498b6fe2c054b1eeaaeb98b89b028" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_SafetyRegulatoryInfo" path="packages/apps/SafetyRegulatoryInfo" revision="e2b15673fd370a107e773e90542f7538fb911133" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_Settings" path="packages/apps/Settings" revision="fdc7f94bf577ea03f724ff558d21665c5a22c281" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_SetupWizard" path="packages/apps/SetupWizard" revision="0c7b92ad7a2a6a7237e835a77b5f46932b5c72d4" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_Snap" path="packages/apps/Snap" revision="774797c77645f6abe4856a7fa49ac6d0fae17dba" upstream="refs/heads/cm-14.1"/>
+  <project groups="apps_stk,pdk-fs" name="LineageOS/android_packages_apps_Stk" path="packages/apps/Stk" revision="05fec2eb1e2f08cef464f5febd4e64ef506df865" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_StorageManager" path="packages/apps/StorageManager" revision="a83242b2c5f653c1cc956bda59410b84d5a89a7e" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_TV" path="packages/apps/TV" revision="95adef336035660beb6028e854936ddfdc986c4e" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_Tag" path="packages/apps/Tag" revision="c2d04dc6074e4262d649c68d7be46c0a946db61a" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_Terminal" path="packages/apps/Terminal" revision="8e2999c96aad181cdd6a2c70f5c27dbeac462b52" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_ThemeChooser" path="packages/apps/ThemeChooser" revision="a8f967abae802a7e40f7bf9312e172decfcea465" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_Trebuchet" path="packages/apps/Trebuchet" revision="bec1da78b85d5f970e0045ae64c482bf35cf5c48" upstream="refs/heads/cm-14.1"/>
+  <project groups="generic_fs" name="LineageOS/android_packages_apps_TvSettings" path="packages/apps/TvSettings" revision="03fa940a70958062694432bbea3cc6818af6ed64" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_apps_UnifiedEmail" path="packages/apps/UnifiedEmail" revision="a2eadaae9166033d79c38854278f4c449e3be3a4" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_WallpaperPicker" path="packages/apps/WallpaperPicker" revision="235345af545e326cbcd8aab0c04aa12e8a9f519c" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_WundergroundWeatherProvider" path="vendor/cmsdk/samples/weatherproviderservice/WundergroundWeatherProvider" revision="79b5f88aa826926a2a24024658aaeadc0355530f" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_apps_YahooWeatherProvider" path="vendor/cmsdk/samples/weatherproviderservice/YahooWeatherProvider" revision="cbd94da335a1c06466b11c1e807da10ad3dfba42" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_inputmethods_LatinIME" path="packages/inputmethods/LatinIME" revision="151818a3919d426b86bda335f4d1bf22630f1982" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_providers_BlockedNumberProvider" path="packages/providers/BlockedNumberProvider" revision="6a4e5ff600a61dfbd53339cf5fc222319687192d" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_providers_BookmarkProvider" path="packages/providers/BookmarkProvider" revision="cb94ffac4a6d513c50121fa754831c00646c70eb" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_providers_CalendarProvider" path="packages/providers/CalendarProvider" revision="a656734200bae6ca4590c4ded5489c6ca1fcf3aa" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_providers_CallLogProvider" path="packages/providers/CallLogProvider" revision="c09b8a7dba943a182bc9a95d9220d79a5c7b92c5" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_providers_ContactsProvider" path="packages/providers/ContactsProvider" revision="b57ce09b74ce9d351a7a8d3e4fce457d80a788a1" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_providers_DataUsageProvider" path="packages/providers/DataUsageProvider" revision="86834dbca9aba6f9936c425de07f6d5cb62437ac" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_providers_DownloadProvider" path="packages/providers/DownloadProvider" revision="15cc93d34300a84a5739c3bc9bcc86e1dcd853f8" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_providers_MediaProvider" path="packages/providers/MediaProvider" revision="8cb59e5db9b5cad7a66556d1a26321a85ad16922" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_providers_PartnerBookmarksProvider" path="packages/providers/PartnerBookmarksProvider" revision="96d0a80af45923767baf449fc8c735c2f71d64ae" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_providers_TelephonyProvider" path="packages/providers/TelephonyProvider" revision="4cccef45d02e1d09fd273b6955a2e5540ae311c2" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_providers_ThemesProvider" path="packages/providers/ThemesProvider" revision="16cf3ec2b4c8c14e5f9474e634bd9b1ec0024dc6" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_providers_TvProvider" path="packages/providers/TvProvider" revision="94504712cf45d6849ddd1074d96bbfde4e1dc715" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_providers_UserDictionaryProvider" path="packages/providers/UserDictionaryProvider" revision="88e435cf9d6a65926566216425a0a9403dcdb466" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_providers_WeatherProvider" path="packages/providers/WeatherProvider" revision="82adbf64d8ea7513a2c5b2a75e91df929253917e" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_screensavers_Basic" path="packages/screensavers/Basic" revision="4e3949946492301fd1b3029a24694814d2dc870d" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_screensavers_PhotoTable" path="packages/screensavers/PhotoTable" revision="f99b33fc1ce9f0d0fe5b302722835ffb5374aaec" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_screensavers_WebView" path="packages/screensavers/WebView" revision="6e0a80f6faed6191acc8ce1b6c79eada09e9e042" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_services_CMAudioService" path="packages/services/CMAudioService" revision="3fddddf5b160700ec82832b1753cce7489284869" upstream="refs/heads/cm-14.1"/>
+  <project groups="adp8064,pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_services_Car" path="packages/services/Car" revision="b8e90ddbd04b258640f204d820908ae58972e348" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_services_LiveLockScreenService" path="packages/services/LiveLockScreenService" revision="e6357f3a6090c889149f41b26e3526c9c20c190e" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_services_Mms" path="packages/services/Mms" revision="dea32500a2fa98278b05c3933d9deda918be4988" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_services_Telecomm" path="packages/services/Telecomm" revision="07399bebb4c634975e006653734546e8844a2e41" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_packages_services_Telephony" path="packages/services/Telephony" revision="119c51f09aa0ea7e5a850731b1bac4acad4b7c98" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_services_ThemeManagerService" path="packages/services/ThemeManagerService" revision="13317b9f04b03eeaa84120d19ca97bc494c397e9" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_packages_services_WeatherService" path="packages/services/WeatherService" revision="c42f6f42f31b1dfe15afb0ce73cecdfd06536476" upstream="refs/heads/cm-14.1"/>
+  <project groups="themes" name="LineageOS/android_packages_themes_HexoLibre" path="packages/themes/HexoLibre" revision="18ba8af45ae875547a917bacd5888206cb6c563e" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-fs" name="LineageOS/android_packages_wallpapers_LivePicker" path="packages/wallpapers/LivePicker" revision="1717578cc6e72b4b4f8796138cc3a8a3141bdb22" upstream="refs/heads/cm-14.1"/>
+  <project clone-depth="1" name="LineageOS/android_prebuilts_cmsdk" path="prebuilts/cmsdk" revision="874451b0ed05c5bb197862ef0b3d149e176f641a" upstream="refs/heads/cm-14.1"/>
+  <project clone-depth="1" groups="pdk,darwin,arm" name="LineageOS/android_prebuilts_gcc_darwin-x86_aarch64_aarch64-linux-android-4.9" path="prebuilts/gcc/darwin-x86/aarch64/aarch64-linux-android-4.9" revision="a5d7d4b701d1c1de3da1ebf900ab327e1b4970f9" upstream="refs/heads/cm-14.1"/>
+  <project clone-depth="1" groups="pdk,darwin,arm" name="LineageOS/android_prebuilts_gcc_darwin-x86_arm_arm-linux-androideabi-4.9" path="prebuilts/gcc/darwin-x86/arm/arm-linux-androideabi-4.9" revision="991bc74db43849d2ec2fbc9e971549eb039708f4" upstream="refs/heads/cm-14.1"/>
+  <project clone-depth="1" groups="pdk,darwin,x86" name="LineageOS/android_prebuilts_gcc_darwin-x86_x86_x86_64-linux-android-4.9" path="prebuilts/gcc/darwin-x86/x86/x86_64-linux-android-4.9" revision="815e56de179c10d97b228953bb72ccebf9efe413" upstream="refs/heads/cm-14.1"/>
+  <project clone-depth="1" groups="pdk,linux,arm" name="LineageOS/android_prebuilts_gcc_linux-x86_aarch64_aarch64-linux-android-4.9" path="prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9" revision="7280ce2399316a5dbd8872e0bfe69435d8719230" upstream="refs/heads/cm-14.1"/>
+  <project clone-depth="1" groups="pdk,linux,arm" name="LineageOS/android_prebuilts_gcc_linux-x86_arm_arm-linux-androideabi-4.9" path="prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9" revision="48ef1e67aa261116d2c244a52a30b8ba044399ff" upstream="refs/heads/cm-14.1"/>
+  <project clone-depth="1" groups="pdk,linux,x86" name="LineageOS/android_prebuilts_gcc_linux-x86_x86_x86_64-linux-android-4.9" path="prebuilts/gcc/linux-x86/x86/x86_64-linux-android-4.9" revision="b3acfc1f26aae5cf8da7301e89a2594ae945c060" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_system_bt" path="system/bt" revision="e999a155600da9e2f3d873d0da27fb314f9a1fc7" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_system_extras" path="system/extras" revision="b76b4409cb203ff3e244643b81735a1084803202" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_system_extras_su" path="system/extras/su" revision="d30f4ad4c9a67d07ea00e321718c9cf364b8c723" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_system_keymaster" path="system/keymaster" revision="5c733cf77a1ee79bcfa35ecb1e0ffd709033f2ca" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_system_media" path="system/media" revision="0211728b4eeec735f5229e75cd5e838e1dc0109b" upstream="refs/heads/cm-14.1"/>
+  <project groups="qcom" name="LineageOS/android_system_qcom" path="system/qcom" revision="7bebb68631204f95f736e5bfbe257d7295262ce5" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_system_security" path="system/security" revision="375e02ff680dcbcb31e927e889a6baaf961cf4bb" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="LineageOS/android_system_tools_aidl" path="system/tools/aidl" revision="6192de565e84cf8b52525ab16412a8627d0dce8e" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk" name="LineageOS/android_system_vold" path="system/vold" revision="25ea9c383abd988258e34ae932dbcb5593b12d84" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_vendor_cm" path="vendor/cm" revision="7776e06db744c362105e378b547a5825468914e0" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_vendor_codeaurora_telephony" path="vendor/codeaurora/telephony" revision="9b3337d4ec836297150e0cc267ccfdaa7b77ffb7" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_vendor_qcom_opensource_bluetooth" path="vendor/qcom/opensource/bluetooth" revision="c42da71330622be202fcd0d5862f595186c8f7e0" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_vendor_qcom_opensource_cryptfs_hw" path="vendor/qcom/opensource/cryptfs_hw" revision="144e832ff3e16af20d3975aeec4a64bf8f80a8a3" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_vendor_qcom_opensource_dataservices" path="vendor/qcom/opensource/dataservices" revision="f0d6f0e590187a9a738346ade41474e7cc749da5" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_vendor_qcom_opensource_dpm" path="vendor/qcom/opensource/dpm" revision="70c2c64bcd3df5e7d9d78f9cd9ab9afaa8dc7142" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/android_vendor_qcom_opensource_time-services" path="vendor/qcom/opensource/time-services" revision="dfab2a8b0418966421160512bfb18ec57b20159f" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/cm_platform_sdk" path="vendor/cmsdk" revision="d9c544a2b0fac3e1f7dbc1f1aa5828de80a9d6a3" upstream="refs/heads/cm-14.1"/>
+  <project name="LineageOS/ion" path="external/koush/ion" revision="14d5d874e31f8e47a07954968e48d97e6505f655" upstream="refs/heads/cm-14.1"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="device/common" remote="aosp" revision="ce8d3a16fd31621ff1d6fd3af783dfecf62ed15f" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/arm64" remote="aosp" revision="e6ecf6be2f8acdd21253a08f26ab0f942f76c46d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/armv7-a-neon" remote="aosp" revision="0064a633244371827eef6f7a22208056b6c49566" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/common" remote="aosp" revision="11c092a6cbfcf6207f07a9a8e3398e747e7f5461" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/goldfish" remote="aosp" revision="df5624ac3624a1f27427b15af8b36c7af8e69de8" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/goldfish-opengl" remote="aosp" revision="3855dfbf428269d3c79dd7ba4b257ec5e9b917ff" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/mini-emulator-arm64" remote="aosp" revision="98b20c14af8ab0ca62dfae4843b864d2adc68a1e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/mini-emulator-armv7-a-neon" remote="aosp" revision="5e4db513d2d3b01588471d86d4a423cf840e8f47" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/mini-emulator-x86" remote="aosp" revision="65d59e2be2cfd713513a05d80a0f75794ab60579" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/mini-emulator-x86_64" remote="aosp" revision="70a7dc8f3371f9c744e24c18f5d8dd3c6cc1a6ac" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="device/generic/qemu" remote="aosp" revision="17f0fbd45efaeac0e7af666b135a2e9a71fd0c31" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/x86" remote="aosp" revision="8ff4478d8ad282997025e72f4f89723d73dc485d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/generic/x86_64" remote="aosp" revision="001d21423d3530db17db29a5b9b4c4b45b1fe4f2" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="device,fugu,broadcom_pdk,generic_fs" name="device/google/atv" remote="aosp" revision="7b25e32e182aacb2b1e9c12a55e6be2b49937176" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="device" name="device/google/contexthub" remote="aosp" revision="14247887cb18f87f000cb5f2c8f84a01c9ba9b84" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="device/sample" remote="aosp" revision="d2d05dd5bf56e0b3136cbe733da14a479104cda3" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="divis1969/android" path="android" revision="441c4c8c81aca948fee950d3eb5cb82e05f03f02" upstream="los-14.1-meilan2"/>
+  <project name="divis1969/android_device_meizu_meilan2" path="device/meizu/meilan2" revision="1b278ce93b94cb9e1e71a5cb100e4c18bdc0e402" upstream="los-14.1-meilan2"/>
+  <project groups="pdk" name="divis1969/android_frameworks_av" path="frameworks/av" revision="c5a96cb716ca625c129d59ae91fd40662bae533f" upstream="los-14.1-meilan2"/>
+  <project name="divis1969/android_kernel_meizu_meilan2" path="kernel/meizu/meilan2" revision="5c163c673e64aec3bae1dd78219eb9e2ab5b1ce2" upstream="3.10"/>
+  <project name="divis1969/android_packages_apps_CMUpdater" path="packages/apps/CMUpdater" revision="f837d9b49fb0a3108db2ecafb14a8a6c42b383c9" upstream="los-14.1-meilan2"/>
+  <project groups="pdk" name="divis1969/android_system_core" path="system/core" revision="53ed2a3b50d5102b3091c0edb0e242689f82545d" upstream="los-14.1-meilan2"/>
+  <project groups="pdk" name="divis1969/android_system_netd" path="system/netd" revision="c2ab3c69289f0dd5f0b0eac7452a1da54186548f" upstream="los-14.1-meilan2"/>
+  <project groups="pdk" name="divis1969/android_system_sepolicy" path="system/sepolicy" revision="ceeffde661ca881f27bcdcbfdb5c0c27b9359eb7" upstream="los-14.1-meilan2"/>
+  <project name="divis1969/android_vendor_meizu_meilan2" path="vendor/meizu/meilan2" revision="14f8abfe3204fb3221b6c6be4683de2e758fccd3" upstream="los-14.1-meilan2"/>
+  <project groups="pdk" name="platform/abi/cpp" path="abi/cpp" remote="aosp" revision="36b381298a4efb7c293d394d8b1acbda68230989" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk,tradefed" name="platform/build/blueprint" path="build/blueprint" remote="aosp" revision="3a89d1ce9fe7a5160ee87ee11f99edbf540020fc" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk,tradefed" name="platform/build/soong" path="build/soong" remote="aosp" revision="ff019aa4cff6f8636102003ac14de5442ea6758f" upstream="refs/tags/android-7.1.1_r21">
+    <linkfile dest="Android.bp" src="root.bp"/>
+    <linkfile dest="bootstrap.bash" src="bootstrap.bash"/>
+  </project>
+  <project groups="cts,pdk-cw-fs,pdk-fs" name="platform/cts" path="cts" remote="aosp" revision="dfe279aa91466b6e8d31b7b637badad574b795ec" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/developers/build" path="developers/build" remote="aosp" revision="94b5c0a85af6ecbcffc65f244de6b8889db44ce4" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/ImageMagick" path="external/ImageMagick" remote="aosp" revision="0c7808f09d2a6ba242197f9914eff3fc320f9d09" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/androidplot" path="external/androidplot" remote="aosp" revision="c66727ebf001607cee14521c35bc852b55fd9845" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/ant-glob" path="external/ant-glob" remote="aosp" revision="a73228afa9540b9c5518d360c5ae630bb634f975" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/antlr" path="external/antlr" remote="aosp" revision="dd5fa6d48b827c5d98b625adbc209f4a05567534" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/apache-commons-math" path="external/apache-commons-math" remote="aosp" revision="25a2b6cb1b4a2e40a23c73e4f825c9a3f77d2064" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/apache-harmony" path="external/apache-harmony" remote="aosp" revision="b65e906cc805a0365a25b6263c50857adac2e597" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/apache-http" path="external/apache-http" remote="aosp" revision="cc9d1287d7ff732537f2fc0d1514e79ede953381" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/apache-xml" path="external/apache-xml" remote="aosp" revision="31d7642eb8f37a9166db7f1c9e313ab651bdb8ba" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/archive-patcher" path="external/archive-patcher" remote="aosp" revision="d5ab575b01ebc980c2e6054647e133cb47dc4081" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/autotest" path="external/autotest" remote="aosp" revision="e3b189c49b040d42c9e4e3ae359d77bb90f99956" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/avahi" path="external/avahi" remote="aosp" revision="e67ae65eb3c48969c16751feccfa9daf74b0f406" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/bison" path="external/bison" remote="aosp" revision="7467d52af437dd3dfea237a6865ab84bf258dee0" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/blktrace" path="external/blktrace" remote="aosp" revision="d345431f16b8f76f30a58193ff2b26d5853e1109" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/bouncycastle" path="external/bouncycastle" remote="aosp" revision="c2727c35a0a865cb64e7d9b9d9aeda4de058a443" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/bsdiff" path="external/bsdiff" remote="aosp" revision="2eea58f169079ecb113cb3b292462a775263df69" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/c-ares" path="external/c-ares" remote="aosp" revision="de2cd886042f484dc8694e614c3ac16298f93514" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/caliper" path="external/caliper" remote="aosp" revision="6a66412ab9c544ca7e099f81e764d2c01671ea70" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/cblas" path="external/cblas" remote="aosp" revision="611764050a3af0bb030ff49a5a5b15779ff254c6" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/ceres-solver" path="external/ceres-solver" remote="aosp" revision="233e18458eeb29bf5e4f2b69c5334728c47a6d13" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/chromium-libpac" path="external/chromium-libpac" remote="aosp" revision="bc302deb3eb226c4759c527f16df63581cf2d652" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/chromium-trace" path="external/chromium-trace" remote="aosp" revision="7332cdb42368a904cbf7418de329868989e592da" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/clang" path="external/clang" remote="aosp" revision="af1dacacb12f2732169a7276e0f4f90822ddd21f" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/cmockery" path="external/cmockery" remote="aosp" revision="9199c7bfafefea32d1884182fa655b6e4578c1c4" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/compiler-rt" path="external/compiler-rt" remote="aosp" revision="fa6e8d21528c9d085d1565cef2cea204fe9d6a2d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/conscrypt" path="external/conscrypt" remote="aosp" revision="2486fc8f8dfcddfda57f79bfab770803f06a8bd1" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/crcalc" path="external/crcalc" remote="aosp" revision="9666c57ab247046b716e9c1e56f0dcc7d4a1545f" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/cros/system_api" path="external/cros/system_api" remote="aosp" revision="5b8d4b502ec9f9e1295c5272e2f8690b2767db0a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/curl" path="external/curl" remote="aosp" revision="b49fac3a5311c04b69aa94e73a53738ed37fcd37" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/dagger2" path="external/dagger2" remote="aosp" revision="07bcdbf2e0a9ce721565b536de34ec11aaf614e7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/dbus" path="external/dbus" remote="aosp" revision="f6efe701f17e9cb7b03e197fea6125617859e497" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/dbus-binding-generator" path="external/dbus-binding-generator" remote="aosp" revision="71fde8e0b8a85fe729da5351aacfee4d354fddc5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/deqp" path="external/deqp" remote="aosp" revision="868a8938caa908ce37a3e17d69fa6c51f97320fa" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/dexmaker" path="external/dexmaker" remote="aosp" revision="8e77f1890450085d4aa635c86dfd91160572631e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/dhcpcd-6.8.2" path="external/dhcpcd-6.8.2" remote="aosp" revision="ca69393b8f54e0cd38d876547a0d82e641951798" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/dlmalloc" path="external/dlmalloc" remote="aosp" revision="6661f3ca66b55d8f5a57b96fec97efaf8f3897a5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/dng_sdk" path="external/dng_sdk" remote="aosp" revision="0420a20d94d620f471e47cf3f8c40facca5de58e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/dnsmasq" path="external/dnsmasq" remote="aosp" revision="61b542ef379106207b419360c7f2761208e9dfbf" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/doclava" path="external/doclava" remote="aosp" revision="54f8a1a404f8c339b2a336f83cd991fea3248fcb" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/donuts" path="external/donuts" remote="aosp" revision="005389fb31a67841b5de42f0d25fbfab843e208c" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="drm_gralloc" name="platform/external/drm_gralloc" path="external/drm_gralloc" remote="aosp" revision="cda66b80878c0c0f0799a145b41895c1149da88a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="drm_hwcomposer" name="platform/external/drm_hwcomposer" path="external/drm_hwcomposer" remote="aosp" revision="373730605cdd7ae9913b0ef32ef573cb06c9af9f" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/droiddriver" path="external/droiddriver" remote="aosp" revision="675040fd1a83ee2505e1109489adcc0d666f61ea" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/easymock" path="external/easymock" remote="aosp" revision="8bc2748f2850c88ab6b86c6ceed1ce65bed5ee16" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/eclipse-basebuilder" path="external/eclipse-basebuilder" remote="aosp" revision="076f46888ed346775b8efc564d7694063ef5eea7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/eclipse-windowbuilder" path="external/eclipse-windowbuilder" remote="aosp" revision="c533332008088ee5f61745b724361fbde5b7e770" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/eigen" path="external/eigen" remote="aosp" revision="8d09b45ff989856326c07914bd5233c21a74a903" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/emma" path="external/emma" remote="aosp" revision="deb5711b2635ee9d332605e2e00b63b32bed6777" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/esd" path="external/esd" remote="aosp" revision="943c42b6f8e9afe821744aa4c039f4943ebf29f5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/expat" path="external/expat" remote="aosp" revision="452cd40d64fa13d3cf2054b8fca96fdf34c57f8e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/eyes-free" path="external/eyes-free" remote="aosp" revision="16bd4c7a4d1bfe229068b637614dad7c48dd2ceb" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/fdlibm" path="external/fdlibm" remote="aosp" revision="eb6c9fcfe52e665917ff5a9670c909f9e3c92fa5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/fec" path="external/fec" remote="aosp" revision="791afbe58ff9f55145c4adf632ab8cc9ca6e5686" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/fio" path="external/fio" remote="aosp" revision="1aec78b2e6aaf90d45b8e3f9b3d2f07dd9334827" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/fonttools" path="external/fonttools" remote="aosp" revision="fede58680958e96e6e8f61c3cc6282f798452c53" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/freetype" path="external/freetype" remote="aosp" revision="055aee28cedc3631434b2636fc6093c0d4d818ab" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/gemmlowp" path="external/gemmlowp" remote="aosp" revision="6109d7808c62d14f67b8adddb043ef3c57302de7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk,qcom_msm8x26" name="platform/external/giflib" path="external/giflib" remote="aosp" revision="a57aff106d30e39c782e681f8e4aa3aa612f81c3" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/glide" path="external/glide" remote="aosp" revision="31e64acd1e65045471124267a06241eff1f55d26" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/gmock" path="external/gmock" remote="aosp" revision="a78d46728dda2809b1951be54a7efdd31e09dc17" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/google-benchmark" path="external/google-benchmark" remote="aosp" revision="39352b58f8d274b240dbf0f9a4917c3c61b21b7b" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="dragon" name="platform/external/google-breakpad" path="external/google-breakpad" remote="aosp" revision="e37b6d963f9938c5245d1f19fc91e5fad74f8cdb" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/google-fonts/carrois-gothic-sc" path="external/google-fonts/carrois-gothic-sc" remote="aosp" revision="0062a10458d4c357f3082d66bcb129d11913aaae" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/google-fonts/coming-soon" path="external/google-fonts/coming-soon" remote="aosp" revision="2c5cb418c690815545bbb0316eae5fd33b9fc859" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/google-fonts/cutive-mono" path="external/google-fonts/cutive-mono" remote="aosp" revision="bce2136662854076023066602526ba299e6556b2" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/google-fonts/dancing-script" path="external/google-fonts/dancing-script" remote="aosp" revision="7b6623bd54cee3e48ae8a4f477f616366643cc78" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/google-tv-pairing-protocol" path="external/google-tv-pairing-protocol" remote="aosp" revision="9726a938070e2f281219ef3187f54ef758e6a075" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/gtest" path="external/gtest" remote="aosp" revision="81cb746e0ba7ce98a77b175139c7425fd41021c6" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/guava" path="external/guava" remote="aosp" revision="00d2a356b6f333177999ee9f723b9bdfa3fb9183" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/guice" path="external/guice" remote="aosp" revision="83b7ddb6a7b4db66d57c35ceb51fdbbb8a922aff" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/hamcrest" path="external/hamcrest" remote="aosp" revision="f31b2fcfcfba4a5c6d13a4a2147567c08c72b034" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk,qcom_msm8x26" name="platform/external/harfbuzz_ng" path="external/harfbuzz_ng" remote="aosp" revision="9a9975d24066e395a1de360a8afacfa4e8a8969e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/hyphenation-patterns" path="external/hyphenation-patterns" remote="aosp" revision="dedeff64279b77bafff72b6d866efc93e829b4ab" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/ims" path="external/ims" remote="aosp" revision="fc377f6f26bcd9cdaa703b7c51bdb99bfa3ab094" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/iproute2" path="external/iproute2" remote="aosp" revision="d4db01bf3fe57ba65af116cfa399f89f90002ba7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/iptables" path="external/iptables" remote="aosp" revision="ce477f9fac60afeb6224a6c418a7e6032fefea85" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/iputils" path="external/iputils" remote="aosp" revision="d888244c9ddb46bc895d007af233dc5b2093efb6" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/iw" path="external/iw" remote="aosp" revision="2af129ead0104bc925504169300945e26bd6ccb9" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/jacoco" path="external/jacoco" remote="aosp" revision="91eff0693d6ce5075d4e6c5361060d15ee561fc0" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/jarjar" path="external/jarjar" remote="aosp" revision="8795f34e379f7d29be2ee6cc0b9377106a1d96d7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/javasqlite" path="external/javasqlite" remote="aosp" revision="ee41d81872eedc632f42bd231b95bc945690d159" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/javassist" path="external/javassist" remote="aosp" revision="f7c4b954072e563b75f6910c25bb689bbf38a3d1" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/jcommander" path="external/jcommander" remote="aosp" revision="498658ddd712085b8ecf228171efd67d44648633" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/jdiff" path="external/jdiff" remote="aosp" revision="98ed536fd800bf9ac02a9983da6dc08356a64fa3" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/jetty" path="external/jetty" remote="aosp" revision="a9f2cdb3bee47e31289e3acc5554fc6e704c2add" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/jhead" path="external/jhead" remote="aosp" revision="e4d63ee20e8f89cedb4c59bbb14decf485960201" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/jmdns" path="external/jmdns" remote="aosp" revision="0c71647deb7f7835c473fd3dfb45943083e47794" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/jsilver" path="external/jsilver" remote="aosp" revision="b9b84920ba47ddf7f15baa01c56b28e3d3f951ea" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/jsmn" path="external/jsmn" remote="aosp" revision="cbfa1a02b28b588e16ec221519c6ec17b1c14568" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/jsoncpp" path="external/jsoncpp" remote="aosp" revision="90c81b9c9aef09ef4ffb8de1779301734336d897" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/jsr305" path="external/jsr305" remote="aosp" revision="91467ca5be4e876415f9f6bc4ef4a0f716c68fa4" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/jsr330" path="external/jsr330" remote="aosp" revision="57916beef7b9401b594906d26833e0867bf60829" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/junit" path="external/junit" remote="aosp" revision="77f8b3f30164ea92ca73ebc8a685b12bd4b1512c" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/kernel-headers" path="external/kernel-headers" remote="aosp" revision="a4960127a8b1fdc23559c059bd82813529196e5c" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/ksoap2" path="external/ksoap2" remote="aosp" revision="f13853ff0fa5eb65afc847176e55ca6db293eb3c" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libavc" path="external/libavc" remote="aosp" revision="e08e31d5efe89f234a5204b99d0dcb3d98467572" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/libbrillo" path="external/libbrillo" remote="aosp" revision="733e6febbc18cb308d20abb77a449bf1f954316f" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/libcap" path="external/libcap" remote="aosp" revision="5fc5a50a942e6f863189b52d2a831730b36c3331" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libcap-ng" path="external/libcap-ng" remote="aosp" revision="fd9ec1ca0febeb1e6947c2fb374d8de00fd81e6e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/libchrome" path="external/libchrome" remote="aosp" revision="e31114d100e21e301344f6c111ba70d4c0daf689" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libcxx" path="external/libcxx" remote="aosp" revision="d8170174bf66c98fca967b7133783c0c95292993" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libcxxabi" path="external/libcxxabi" remote="aosp" revision="fb11cb31ea214386a681d2f28b126b310ac53657" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/libdaemon" path="external/libdaemon" remote="aosp" revision="e2f604066d97431c95856c73d7b9ee46b348d37e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libdivsufsort" path="external/libdivsufsort" remote="aosp" revision="ae4cb1345c1db6584e7492930f1dac565ad9cfad" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libdrm" path="external/libdrm" remote="aosp" revision="d6513d7e0f454db11eb469ef9629ff06582a3003" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/libedit" path="external/libedit" remote="aosp" revision="67e14dfc833aafa400a3aad8cb329cbaec503445" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/libevent" path="external/libevent" remote="aosp" revision="a5dd84c71082d993bd8273d674daf89e4e9853a7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libexif" path="external/libexif" remote="aosp" revision="bcbfc5e831a8eb5a121752f3151c039cd13ff721" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libgdx" path="external/libgdx" remote="aosp" revision="49f2149c71d3b512699f8057451202cd4102958c" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libgsm" path="external/libgsm" remote="aosp" revision="2f66c771f18317147e446fab5a95082d18a6db20" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/libhevc" path="external/libhevc" remote="aosp" revision="f48c012a9068d457d7433576a7b6dbeabea4fb69" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libjpeg-turbo" path="external/libjpeg-turbo" remote="aosp" revision="0141f11c240da93c012a9ed4bb35308d86d77454" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/liblzf" path="external/liblzf" remote="aosp" revision="a88b9629447deabe8697d2f8fd4cc70aa6e1b563" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/libmicrohttpd" path="external/libmicrohttpd" remote="aosp" revision="1e68f5d827a859ba3b7ab6a70a60247e0b96afa5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libmpeg2" path="external/libmpeg2" remote="aosp" revision="212b4c4179975c1a263d5ee4723223181a8b46ad" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libmtp" path="external/libmtp" remote="aosp" revision="7ed2065db3ab9851f47426f3a35ba7045ce528b2" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libnl" path="external/libnl" remote="aosp" revision="f0b40192efd1af977564ed6335d42a8bbdaf650a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libogg" path="external/libogg" remote="aosp" revision="6dba790f3372d03eee07c693789166ca9fa07b0a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libopus" path="external/libopus" remote="aosp" revision="0d052d64480a30e83fcdda80f4774624e044beb7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk,pdk-cw-fs,pdk-fs" name="platform/external/libpcap" path="external/libpcap" remote="aosp" revision="ae8393dd9704bf3f666affebf731042c0b62a37b" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libphonenumber" path="external/libphonenumber" remote="aosp" revision="a2958e2a0fadcf63688029b7e6b0ccc5732222a2" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libpng" path="external/libpng" remote="aosp" revision="106a9f5260a146e74dc1cd755e33b12177df2bb8" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libunwind" path="external/libunwind" remote="aosp" revision="d35224ff189bf5fed77bfcc36c790c8dd205d0e0" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/libunwind_llvm" path="external/libunwind_llvm" remote="aosp" revision="f171e7279d7fa8977bbe25e19019380ee493e885" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libusb" path="external/libusb" remote="aosp" revision="dc5d19652007b3ea00631f6753afa9e04aea9960" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libusb-compat" path="external/libusb-compat" remote="aosp" revision="759481ae400d02fe99488dcdcd653b4f8139a39c" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libutf" path="external/libutf" remote="aosp" revision="853ef375ba2ce430f5b13b556812b2d83ccc82e1" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libvncserver" path="external/libvncserver" remote="aosp" revision="bec50fdbf6ec2d61edda4f69913f8a8331b8b364" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libvorbis" path="external/libvorbis" remote="aosp" revision="dee2e0a12822ec62c89c2d7582f1a7d32cd0875b" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/libvpx" path="external/libvpx" remote="aosp" revision="6886e8e0a9db2dbad723dc37a548233e004b33bc" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/libvterm" path="external/libvterm" remote="aosp" revision="6d78f36633063dad0689ca42be1ad8d0313ebfab" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/libweave" path="external/libweave" remote="aosp" revision="18bf9157ffe51f8715c39da2fb443585d0e80a19" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs,libxml2" name="platform/external/libxml2" path="external/libxml2" remote="aosp" revision="a136fc2e5a8893a02b0912862d26a575fcbd641a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="libyuv,pdk-cw-fs,pdk-fs" name="platform/external/libyuv" path="external/libyuv" remote="aosp" revision="f047e7ca6983218eed7703c7afd51fed7bd3b5c9" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/littlemock" path="external/littlemock" remote="aosp" revision="a3ea6bf9e6fcf63b69f5635b2ecc1fbd9a9a4dfc" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/lld" path="external/lld" remote="aosp" revision="26c9bb3b51a7ac4bc45f73d532a03cfd9982043a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/llvm" path="external/llvm" remote="aosp" revision="f9d1195a27113f6dafba785611690175ad3914eb" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/ltrace" path="external/ltrace" remote="aosp" revision="c3cdf801ca7315321914a07569f5379af2955058" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/lz4" path="external/lz4" remote="aosp" revision="74ba70e09305e588c3841e0f73f6b3a16703d8a5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/markdown" path="external/markdown" remote="aosp" revision="06a8f8b914d477183f68b84424bce8ff4dae7e84" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/mdnsresponder" path="external/mdnsresponder" remote="aosp" revision="18237bfa08172c62b6c8a6fd378d3fbb7d368b47" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/mesa3d" path="external/mesa3d" remote="aosp" revision="586cfa78861e71160d5a3dbeaff09554829a1027" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/messageformat" path="external/messageformat" remote="aosp" revision="ff217fd086ecac137321c1265d0cc1a15194decf" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/minijail" path="external/minijail" remote="aosp" revision="3213d0fcc6103e444a5ac051314eddacfab2490b" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/mmc-utils" path="external/mmc-utils" remote="aosp" revision="c98bb9fb3feb860b5ad7f0ffee25e7cdd7a26c87" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/mockftpserver" path="external/mockftpserver" remote="aosp" revision="56527f4f9cf6e19136c55e8e6f18fd56da628d86" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/mockito" path="external/mockito" remote="aosp" revision="d339ff4de952c9a064b445ea2359c4d851a4770e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/mockwebserver" path="external/mockwebserver" remote="aosp" revision="69ca35f6fd7f1f49ff2ac8b44b43b7e9578fd5c7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/modp_b64" path="external/modp_b64" remote="aosp" revision="ea22d9747f6dac0f3f972ce3cae96bcb4c401fc5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/mp4parser" path="external/mp4parser" remote="aosp" revision="37d85ea1f71bf0bfdea15dd5bfa8785ece1a15d2" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/mtpd" path="external/mtpd" remote="aosp" revision="46998029d80d5e486940c3c6b641569229349641" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/nanohttpd" path="external/nanohttpd" remote="aosp" revision="c6783c32331b3fe78ffd5077e7f180995d0e268e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/nanopb-c" path="external/nanopb-c" remote="aosp" revision="b225eb267957f24ca2aa2469bc78d418b2e9b795" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/naver-fonts" path="external/naver-fonts" remote="aosp" revision="91e6e9f94d1d769a8f742649674149ba98ce7d45" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/netcat" path="external/netcat" remote="aosp" revision="b023a43765b15f0b0fd5b52b7d8021f515c59c23" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/netperf" path="external/netperf" remote="aosp" revision="236149a19f5d5c4c0068170127f50797d59e6e55" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/neven" path="external/neven" remote="aosp" revision="658d5fee09923c532ec68da3ff7d226a144e5e38" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/nfacct" path="external/nfacct" remote="aosp" revision="833985690db54f9ad3ee7e8f3147a67da8c04760" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/nist-pkits" path="external/nist-pkits" remote="aosp" revision="89fb1b9fdc7f5c48d4983fad62af62c1b780e428" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/nist-sip" path="external/nist-sip" remote="aosp" revision="e091a345b250b1ce4212d4c9d13649fe9c625bbe" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/noto-fonts" path="external/noto-fonts" remote="aosp" revision="599bd2666e266cbaa10e2e2271008bff2a003102" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/oauth" path="external/oauth" remote="aosp" revision="49f3624a6d3307b640a012f15b94d04174473501" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/objenesis" path="external/objenesis" remote="aosp" revision="027386d6375a3cb34d9934fd952039254831cbc6" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/opencv" path="external/opencv" remote="aosp" revision="3b08021e73ae94cbb5a180cf6861011c2083e3ea" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/opencv3" path="external/opencv3" remote="aosp" revision="ae320ad446d754d85adafdbabc34a3898009701e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/owasp/sanitizer" path="external/owasp/sanitizer" remote="aosp" revision="bbfb25464ff30c5a62dce351d719a8c533afb2a3" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/parameter-framework" path="external/parameter-framework" remote="aosp" revision="c599aa5fada664c56f4330a0e05af4e54971534f" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/pcre" path="external/pcre" remote="aosp" revision="222bbf4b3fb8e13c21686803e47e31aa3e4ad130" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/pdfium" path="external/pdfium" remote="aosp" revision="ac3d58cff7c80b0ef56bf55130d91da17cbaa3c4" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/piex" path="external/piex" remote="aosp" revision="0edcd9aecceaffe22368d91df82a0e4f6ff47d97" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/ppp" path="external/ppp" remote="aosp" revision="d9aeba443abce801cd696b3921a559cab88e1e74" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/proguard" path="external/proguard" remote="aosp" revision="af893cdc1242e4cfbeeb10e2323f9a689a825177" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/protobuf" path="external/protobuf" remote="aosp" revision="48b07ad0a7d451a1a12e021b09ec15db58172e81" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/regex-re2" path="external/regex-re2" remote="aosp" revision="13ad88f183dc229720220244ba16213327fed644" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/replicaisland" path="external/replicaisland" remote="aosp" revision="374426a588bfffc7d0657bffe05b65660b438007" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/rmi4utils" path="external/rmi4utils" remote="aosp" revision="40eb2d785d3e367c01fc2a3d53820550e7f66739" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/robolectric" path="external/robolectric" remote="aosp" revision="f522a207e60af3e8cf895e681fb25278219dc11c" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/roboto-fonts" path="external/roboto-fonts" remote="aosp" revision="b9b029ef6d3548ede2b0cbc8f96c32f3fb1a353c" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/rootdev" path="external/rootdev" remote="aosp" revision="9d44d9dd53bd3da3b01445a52b5d2420dc40f9b2" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/safe-iop" path="external/safe-iop" remote="aosp" revision="cd76f998688d145235de78ecd5b340d0eac9239d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/scrypt" path="external/scrypt" remote="aosp" revision="72691396f9fa84fd39cb72d031750e580e648aa3" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/selinux" path="external/selinux" remote="aosp" revision="89ade431ecff217e0ce7752fda81b5e4e404a293" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk,qcom_msm8x26" name="platform/external/sfntly" path="external/sfntly" remote="aosp" revision="61657b2d87b88576ab1b7d7fb5768b0e315c9216" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/shflags" path="external/shflags" remote="aosp" revision="c4876e01829b8cf110ee33267bb1bad1f8ebb51d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/sl4a" path="external/sl4a" remote="aosp" revision="063be756b44b51243e8f84ed75a74f72c5b74835" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/external/slf4j" path="external/slf4j" remote="aosp" revision="037a293cd09178f946d5df43e8dff1ad8758c163" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/smali" path="external/smali" remote="aosp" revision="edc88aff44ff80f969df61725a992680cd0c464c" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/snakeyaml" path="external/snakeyaml" remote="aosp" revision="05152a01decfcca5cef87e3768852a751e2c67b3" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/sonic" path="external/sonic" remote="aosp" revision="0227d834966b304525869d88fd20b2ac835df878" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/sonivox" path="external/sonivox" remote="aosp" revision="8098ca68c87113a65cda866829205ce451c2ae83" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/speex" path="external/speex" remote="aosp" revision="468d5f08801712615c39321b1f22f04c63b1277d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/sqlite" path="external/sqlite" remote="aosp" revision="0972a0b9ba362497b378704ba3850fbdb6e914d1" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/squashfs-tools" path="external/squashfs-tools" remote="aosp" revision="04b80838500406c7056e0d016a16ef25feb4947d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/srtp" path="external/srtp" remote="aosp" revision="ab8d27c7566de29e3a0af3f2324036e8d5646d76" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/strace" path="external/strace" remote="aosp" revision="372fd474dea063e08f8faf9abdf0a2bad06a7955" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/svox" path="external/svox" remote="aosp" revision="5185e6e5c5a1398aab776e4a7a6e4a061bc0035d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/tagsoup" path="external/tagsoup" remote="aosp" revision="9c02d9f506855965ec513685788890dfc856a5bc" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk,pdk-cw-fs,pdk-fs" name="platform/external/tcpdump" path="external/tcpdump" remote="aosp" revision="dbb0163636b74b580abcf7d1de8d834163ca0a3a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/testng" path="external/testng" remote="aosp" revision="d3bb4c37e9b45ca9511da099247f231293a2b14e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/timezonepicker-support" path="external/timezonepicker-support" remote="aosp" revision="99e91a76fd74bad10266623d67cdb98d011f709e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/tinyxml" path="external/tinyxml" remote="aosp" revision="b162e864bd02bb79423b4ef01d0e5e5840aa416b" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/tlsdate" path="external/tlsdate" remote="aosp" revision="5277834396f52a760bb237044d5539fc4aaa87bb" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/tpm2" path="external/tpm2" remote="aosp" revision="c76d4eb985b451c2b4fbc882e6da0e8d89cd2d18" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/tremolo" path="external/tremolo" remote="aosp" revision="5dc99237d49e73c27d3eca54f6ccd97d13f94de0" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/unicode" path="external/unicode" remote="aosp" revision="e1a94a1eb4df6b473f1530cad1d81d2b15da0b58" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/universal-tween-engine" path="external/universal-tween-engine" remote="aosp" revision="fdc20ba6040e08858275612d111ce2f23a7502e4" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/v8" path="external/v8" remote="aosp" revision="21efce637eb329c94f1323b6a2334a1c977e1a9d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/valgrind" path="external/valgrind" remote="aosp" revision="add683d5f374b40576458fa386c7d75369014e11" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="vboot" name="platform/external/vboot_reference" path="external/vboot_reference" remote="aosp" revision="2f4974d1d84a816e6f687e946ecca928c0f3c535" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/vixl" path="external/vixl" remote="aosp" revision="206cdf4d381b5169a91b20d413d1516625313c45" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/vogar" path="external/vogar" remote="aosp" revision="ca0247d5a09ba733173e55a75fe26bd3d1a37327" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/external/vulkan-validation-layers" path="external/vulkan-validation-layers" remote="aosp" revision="a87ef7614124aa7918940ae3e8bca2f491d4e298" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk,qcom_msm8x26" name="platform/external/webp" path="external/webp" remote="aosp" revision="45ca9a6b9c394f2edf37526f562eeaf655299fc8" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/webrtc" path="external/webrtc" remote="aosp" revision="b3cb8ab4ede8bb77f0bdef2715efc2c1e6267072" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/external/xmlrpcpp" path="external/xmlrpcpp" remote="aosp" revision="1d7192fe0d2f788f8f150899c58b86c5ff10456a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/xmlwriter" path="external/xmlwriter" remote="aosp" revision="e95d92246ee35273dde2bee8b00485cc14c12be5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/xmp_toolkit" path="external/xmp_toolkit" remote="aosp" revision="42ea4dc6d1fc2206a7778029070ed9213e3b0fbf" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/zopfli" path="external/zopfli" remote="aosp" revision="d467682cabdaff41673db87ccabc9dcd06977241" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/external/zxing" path="external/zxing" remote="aosp" revision="fedf8f2d8099bf7bb85dc3db8699343d56617deb" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/frameworks/compile/libbcc" path="frameworks/compile/libbcc" remote="aosp" revision="d2e35f95915d480fe203d6614df8b0f5d14de0e5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/frameworks/compile/mclinker" path="frameworks/compile/mclinker" remote="aosp" revision="119bb9b550f139ace5f69075390937c7f1222761" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/frameworks/compile/slang" path="frameworks/compile/slang" remote="aosp" revision="4eb5fac8a0466c674e565ff2c96986c499b439d4" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/data-binding" path="frameworks/data-binding" remote="aosp" revision="68577455ab58e33a337144991bdb6a3bce22ebf2" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/ex" path="frameworks/ex" remote="aosp" revision="7f0e3dab5a892228d8dead7f0221cc9ae82474f7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/minikin" path="frameworks/minikin" remote="aosp" revision="1aa0c40db9d3d308758fc836ac117a9b4e3723a5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/ml" path="frameworks/ml" remote="aosp" revision="13223cca22c388bf9c4941fca3c92c5acfe73650" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/multidex" path="frameworks/multidex" remote="aosp" revision="c094a2de01995fbed174287e2c9ad0c0415f5ece" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/frameworks/opt/bitmap" path="frameworks/opt/bitmap" remote="aosp" revision="a0d4e3108663202564a6833b76770075b8e5b767" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/bluetooth" path="frameworks/opt/bluetooth" remote="aosp" revision="e2a4a6b610c3195f0a6f0e5d32ca6756df68f1b0" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/calendar" path="frameworks/opt/calendar" remote="aosp" revision="03b18577f8f8f799e87a62b8e03889ddacf6daa2" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/colorpicker" path="frameworks/opt/colorpicker" remote="aosp" revision="c33b834030798db132a61f30c6f70433df76e368" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/emoji" path="frameworks/opt/emoji" remote="aosp" revision="92eede13edbf22b501edb9aeb92366f91eab9781" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/frameworks/opt/inputconnectioncommon" path="frameworks/opt/inputconnectioncommon" remote="aosp" revision="3baece9b20fa480da46d860acd7320fd9eee3386" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/inputmethodcommon" path="frameworks/opt/inputmethodcommon" remote="aosp" revision="990fcb1a6dbb5d1204cc8ec86e4bc3f691f4aeeb" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/frameworks/opt/net/ethernet" path="frameworks/opt/net/ethernet" remote="aosp" revision="57aea849a9b02433b459f4f6f1c3d72d8cc430ca" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/net/voip" path="frameworks/opt/net/voip" remote="aosp" revision="3081e5a8b67bcb9cb4fc1dcf75ce1f3faf7d547f" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/photoviewer" path="frameworks/opt/photoviewer" remote="aosp" revision="67db0fe775735f2414b5e82a478b434680ab7b23" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/opt/timezonepicker" path="frameworks/opt/timezonepicker" remote="aosp" revision="876e6f242093737d6abdd7b2d015c3159deb148a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/frameworks/rs" path="frameworks/rs" remote="aosp" revision="107ff9e12bfc76e414f37fae0fcda25f13c12970" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/volley" path="frameworks/volley" remote="aosp" revision="20b215734ff1964013caa19e3c9aa44f3922611f" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/webview" path="frameworks/webview" remote="aosp" revision="ad75a55a161c28a96c3cf1a2ad6bda28ea5e9799" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/frameworks/wilhelm" path="frameworks/wilhelm" remote="aosp" revision="34ea74827da9a7401d779f7dab9bc63b8253baa4" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/hardware/akm" path="hardware/akm" remote="aosp" revision="85837c2e77e032a834121ec3b9b6128f691d68a8" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/hardware/google/apf" path="hardware/google/apf" remote="aosp" revision="f9491fa2795120de428ffcea3a113616b63644f3" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="intel" name="platform/hardware/intel/audio_media" path="hardware/intel/audio_media" remote="aosp" revision="218f0d6bc9532d0b707ea325fd96998249fe47bf" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="intel" name="platform/hardware/intel/bootstub" path="hardware/intel/bootstub" remote="aosp" revision="c759e5127aa582ac515ee1446da15f601b15a99a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="intel" name="platform/hardware/intel/common/bd_prov" path="hardware/intel/common/bd_prov" remote="aosp" revision="8af329f2d2b54dfcfa84051d3ce1fae95f79011a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="intel" name="platform/hardware/intel/common/libstagefrighthw" path="hardware/intel/common/libstagefrighthw" remote="aosp" revision="690809fcb1c7fc7042bd99a7521ad0608b20ba03" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="intel" name="platform/hardware/intel/common/wrs_omxil_core" path="hardware/intel/common/wrs_omxil_core" remote="aosp" revision="1e4406b6b79aab5720806558606e079c032257d2" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="intel_sensors" name="platform/hardware/intel/sensors" path="hardware/intel/sensors" remote="aosp" revision="68dc9e70b79dacddc4e0bf00af0de7f764b04eed" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="marvell_bt" name="platform/hardware/marvell/bt" path="hardware/marvell/bt" remote="aosp" revision="3f33d194e8300816b94d1d7b68b1d48c8f903251" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="omap3" name="platform/hardware/ti/omap3" path="hardware/ti/omap3" remote="aosp" revision="40292fb9eeb2cf0bb95dc818da12ddcae40b931c" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="omap4-aah" name="platform/hardware/ti/omap4-aah" path="hardware/ti/omap4-aah" remote="aosp" revision="a62514d376a94e27bec5e932aadb67401ca550b0" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/libnativehelper" path="libnativehelper" remote="aosp" revision="8ebb2fb2e4b92592368c1360d49d5dfa16ef56cc" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="generic_fs" name="platform/ndk" path="ndk" remote="aosp" revision="76ca48a9270bead748bdc8feec16ee40e0ae6f98" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/packages/apps/BasicSmsReceiver" path="packages/apps/BasicSmsReceiver" remote="aosp" revision="037a17a13e341a3979da8bfea5e5f297f2367009" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/packages/apps/OneTimeInitializer" path="packages/apps/OneTimeInitializer" remote="aosp" revision="01e429c08e51291315890de9677151a7e0b6ad35" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-fs" name="platform/packages/apps/Provision" path="packages/apps/Provision" remote="aosp" revision="53593db784a7425c424ccd52fcd122847ed26a4d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/packages/apps/Test/connectivity" path="packages/apps/Test/connectivity" remote="aosp" revision="c835e2e0c11d538415c05dc5e636fe56f1cc7185" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/packages/experimental" path="packages/experimental" remote="aosp" revision="0e6177c78af2de6d71279725753d5db92511f397" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/pdk" path="pdk" remote="aosp" revision="708589163e790eb3a7fec09f4832a0f78999bdf3" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/platform_testing" path="platform_testing" remote="aosp" revision="9ceec1015953bf3c6bc9a89a064fc35e1d0e67f4" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk-fs" name="platform/prebuilts/android-emulator" path="prebuilts/android-emulator" remote="aosp" revision="4cfa2f2b82149b4d196c22f4518bef4d1d089118" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk,darwin" name="platform/prebuilts/clang/darwin-x86/host/3.6" path="prebuilts/clang/darwin-x86/host/3.6" remote="aosp" revision="606e79e7cd9fc1a6ebb389b5fae0658f2c5494dc" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk,darwin" name="platform/prebuilts/clang/host/darwin-x86" path="prebuilts/clang/host/darwin-x86" remote="aosp" revision="4940bb51ee0e71440981e58a7fada9247579563b" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/clang/host/linux-x86" path="prebuilts/clang/host/linux-x86" remote="aosp" revision="45562a53b2a5eb7c6e8f400413d19a12c660d7b1" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk,linux" name="platform/prebuilts/clang/linux-x86/host/3.6" path="prebuilts/clang/linux-x86/host/3.6" remote="aosp" revision="b660e8f76f1543abf50ebfbdb8d10112d93fec3d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk-fs" name="platform/prebuilts/deqp" path="prebuilts/deqp" remote="aosp" revision="ab4b96f0aa2f44ba9862fcd8a285177dd127df17" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk-fs" name="platform/prebuilts/devtools" path="prebuilts/devtools" remote="aosp" revision="d054448a1147fc5294089b6ac7aa3abe92202761" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/eclipse" path="prebuilts/eclipse" remote="aosp" revision="cf9f78f8cf41b16edf9f712598a42743d5cea4af" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk,darwin,arm" name="platform/prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/darwin-x86/arm/arm-eabi-4.8" remote="aosp" revision="6d08ca9f45ff685648fd13c75bf5cac4b11c19bb" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk,darwin" name="platform/prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" path="prebuilts/gcc/darwin-x86/host/i686-apple-darwin-4.2.1" remote="aosp" revision="ec5aa66aaa4964c27564d0ec84dc1f18a2d72b7e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk,linux,arm" name="platform/prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" path="prebuilts/gcc/linux-x86/arm/arm-eabi-4.8" remote="aosp" revision="26e93f6af47f7bd3a9beb5c102a5f45e19bfa38a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk,linux" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.11-4.8" remote="aosp" revision="1273431a189717842f033573eb8c777e13dd88b7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk,linux" name="platform/prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-linux-glibc2.15-4.8" remote="aosp" revision="73ca99196723f810dad42390d154654354f57c16" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk-fs" name="platform/prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" path="prebuilts/gcc/linux-x86/host/x86_64-w64-mingw32-4.8" remote="aosp" revision="c795eed743bc6cee4ead5407cc237c43abf6fa26" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="darwin" name="platform/prebuilts/gdb/darwin-x86" path="prebuilts/gdb/darwin-x86" remote="aosp" revision="eb0534300f5314a9affdcc11ed4a93557db2f573" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="linux" name="platform/prebuilts/gdb/linux-x86" path="prebuilts/gdb/linux-x86" remote="aosp" revision="b6a258e04f2c28a9d3cb153fcdbec0f1b2b694d3" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="darwin,tradefed" name="platform/prebuilts/go/darwin-x86" path="prebuilts/go/darwin-x86" remote="aosp" revision="3051fa05016ec37192065785cb192c82e54b0d26" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="linux,tradefed" name="platform/prebuilts/go/linux-x86" path="prebuilts/go/linux-x86" remote="aosp" revision="3b15975e1e4d97060c4f4fee2e14a2bc72707cc6" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk-cw-fs,pdk-fs" name="platform/prebuilts/gradle-plugin" path="prebuilts/gradle-plugin" remote="aosp" revision="f059e441016cd8b57017dd378070d7a032a829c3" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk-cw-fs,pdk-fs" name="platform/prebuilts/libs/libedit" path="prebuilts/libs/libedit" remote="aosp" revision="d32685dba4011664b590b94ad156bc734c2c9bb5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk-cw-fs,pdk-fs" name="platform/prebuilts/maven_repo/android" path="prebuilts/maven_repo/android" remote="aosp" revision="d24cb6e69a48b70e8b92ae63370112b25adfcc39" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/misc" path="prebuilts/misc" remote="aosp" revision="e3159d2cc76bba45f6eb71047f0069240bcbf6ca" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/ndk" path="prebuilts/ndk" remote="aosp" revision="f7e665a1af37619e136cb2b998c076e5316fe937" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="darwin,pdk,tradefed" name="platform/prebuilts/ninja/darwin-x86" path="prebuilts/ninja/darwin-x86" remote="aosp" revision="81fb17d2dbe187ff9e9102b8c8283cf39ac3b6f2" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="linux,pdk,tradefed" name="platform/prebuilts/ninja/linux-x86" path="prebuilts/ninja/linux-x86" remote="aosp" revision="08c87a043c925cf88a98d73a8f01a9e06fab7cb9" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="darwin,pdk,pdk-cw-fs,pdk-fs" name="platform/prebuilts/python/darwin-x86/2.7.5" path="prebuilts/python/darwin-x86/2.7.5" remote="aosp" revision="0c5958b1636c47ed7c284f859c8e805fd06a0e63" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="linux,pdk,pdk-cw-fs,pdk-fs" name="platform/prebuilts/python/linux-x86/2.7.5" path="prebuilts/python/linux-x86/2.7.5" remote="aosp" revision="74e4f93e81205ac85f74eaf5fd4c86515779aee1" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/qemu-kernel" path="prebuilts/qemu-kernel" remote="aosp" revision="ad96539afe082a566efcde8b161aa9e19a2970a8" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk" name="platform/prebuilts/sdk" path="prebuilts/sdk" remote="aosp" revision="ead1cb27e98ab579a329ad2ebf0d133a9c6c9051" upstream="refs/tags/android-7.1.1_r21"/>
+  <project clone-depth="1" groups="pdk,tools" name="platform/prebuilts/tools" path="prebuilts/tools" remote="aosp" revision="c011942cd2da09d646ec22cf6ce94db7fc57bfe6" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk-cw-fs,pdk-fs" name="platform/sdk" path="sdk" remote="aosp" revision="317031cb0035803f54c21cc78ea7cf830a247865" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/system/ca-certificates" path="system/ca-certificates" remote="aosp" revision="51300a813051dcaaf3dc07000e92ed40a27a2b21" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/system/connectivity/apmanager" path="system/connectivity/apmanager" remote="aosp" revision="6b32d8c3ef43ce1d5280c202733a1e9f17850eac" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/system/connectivity/dhcp_client" path="system/connectivity/dhcp_client" remote="aosp" revision="bf76367cd82e6eac86993ce852286a7c36d755bf" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/system/connectivity/shill" path="system/connectivity/shill" remote="aosp" revision="269d710ded3ced0d1857430bf2da5a670629afe1" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/system/firewalld" path="system/firewalld" remote="aosp" revision="835d2c2d6f151059c4d70adbfdac9aca7b3f98c5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="pdk" name="platform/system/gatekeeper" path="system/gatekeeper" remote="aosp" revision="e3fab37e2aec7e09a1956ffaa0c05a63a6f539e7" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/system/nativepower" path="system/nativepower" remote="aosp" revision="70d55adbe30ccab9ce54ee782aa80724ad27862b" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/system/nvram" path="system/nvram" remote="aosp" revision="c8e2b037667539ddbde0a0a782b8258964ca4fce" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/system/tpm" path="system/tpm" remote="aosp" revision="8e9be04bfdf8501018518989a56f588e136deaf0" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/system/update_engine" path="system/update_engine" remote="aosp" revision="44f24b13682f29e0a1eefd44a8bf7149fe8f805a" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/system/weaved" path="system/weaved" remote="aosp" revision="d53e7a5301f5c61c1a5d884a82950046e4031f1e" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/system/webservd" path="system/webservd" remote="aosp" revision="205bca472f0b8434fdeefa0d02852f48610448a5" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="tools" name="platform/tools/external/fat32lib" path="tools/external/fat32lib" remote="aosp" revision="3880776e41ff7def06e351720f2d162f88b58a03" upstream="refs/tags/android-7.1.1_r21"/>
+  <project groups="tools" name="platform/tools/external/gradle" path="tools/external/gradle" remote="aosp" revision="3e814f34be10a032132b56c27d2841c0d1fc626d" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="platform/tools/test/connectivity" path="tools/test/connectivity" remote="aosp" revision="ccadc4bc85ba64b24b37f118190f823846f37848" upstream="refs/tags/android-7.1.1_r21"/>
+  <project name="toolchain/binutils" remote="aosp" revision="c327c9c1bcffd231fcaa05f3fd8c047d1fe0afcc" upstream="refs/tags/android-7.1.1_r21"/>
+</manifest>
