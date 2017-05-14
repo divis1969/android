@@ -519,4 +519,8 @@
   <project path="device/meizu/meilan2" name="divis1969/android_device_meizu_meilan2" revision="los-14.1-meilan2"/>
   <project path="kernel/meizu/meilan2" name="divis1969/android_kernel_meizu_meilan2" revision="3.10" />
   <project path="vendor/meizu/meilan2" name="divis1969/android_vendor_meizu_meilan2" revision="los-14.1-meilan2"/>
+  
+  <!-- Substratum support -->
+  <include name="snippets/substratum.xml" />
+
 </manifest>
