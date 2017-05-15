@@ -493,7 +493,7 @@
   <project path="system/nvram" name="platform/system/nvram" remote="aosp" />
   <project path="system/security" name="LineageOS/android_system_security" groups="pdk" />
   <!-- <project path="system/sepolicy" name="LineageOS/android_system_sepolicy" groups="pdk" /> -->
-  <project path="system/sepolicy" name="divis1969/android_system_sepolicy" groups="pdk" revision="los-14.1-meilan2" />
+  <project path="system/sepolicy" name="divis1969/android_system_sepolicy" groups="pdk" revision="los-14.1-oms-meilan2" />
   <project path="system/tools/aidl" name="LineageOS/android_system_tools_aidl" groups="pdk" />
   <project path="system/tpm" name="platform/system/tpm" remote="aosp" />
   <project path="system/update_engine" name="platform/system/update_engine" groups="pdk" remote="aosp" />
@@ -516,9 +516,9 @@
 
   <include name="snippets/cm.xml" />
 
-  <project path="device/meizu/meilan2" name="divis1969/android_device_meizu_meilan2" revision="los-14.1-meilan2"/>
+  <project path="device/meizu/meilan2" name="divis1969/android_device_meizu_meilan2" revision="los-14.1-oms-meilan2" />
   <project path="kernel/meizu/meilan2" name="divis1969/android_kernel_meizu_meilan2" revision="3.10" />
-  <project path="vendor/meizu/meilan2" name="divis1969/android_vendor_meizu_meilan2" revision="los-14.1-meilan2"/>
+  <project path="vendor/meizu/meilan2" name="divis1969/android_vendor_meizu_meilan2" revision="los-14.1-meilan2" />
   
   <!-- Substratum support -->
   <include name="snippets/substratum.xml" />
