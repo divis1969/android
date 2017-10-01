@@ -3,7 +3,7 @@
 
   <!-- LineageOS additions -->
   <!-- <project path="android" name="LineageOS/android" /> -->
-  <project path="android" name="divis1969/android" revision="los-14.1-meilan2" />
+  <project path="android" name="divis1969/android" revision="los-14.1-kernel-3.18-meilan2" />
   <project path="external/bash" name="LineageOS/android_external_bash" />
   <project path="external/cmsdk-api-coverage" name="LineageOS/android_external_cmsdk-api-coverage" />
   <project path="external/exfat" name="LineageOS/android_external_exfat" />
